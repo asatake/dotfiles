@@ -48,11 +48,15 @@
 
 (package! evil-snipe :disable t)
 
+(package! ox-gfm)
+
 (package! swiper)
 (package! atom-one-dark-theme)
 
 (package! tide)
 (package! typescript-mode)
+(package! prettier-js)
+
 (package! sqlup-mode)
 (package! visual-regexp)
 ;; (disable-packages! company-anaconda anaconda-mode)

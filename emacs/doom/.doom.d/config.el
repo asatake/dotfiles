@@ -24,6 +24,21 @@
 ;; (global-set-key (kbd "C-x f g") 'ripgrep-regexp)
 
 
+;; smartparens
+(sp-pair "<" ">")
+(show-smartparens-global-mode t)
+
+
+;; recentf
+(setq recentf-auto-cleanup 'never) ;; disable before we start recentf!
+
+
+;; spell checking
+(setq ispell-program-name "aspell")
+(after! org (add-hook 'org-mode-hook 'turn-on-flyspell))
+(after! typescript (add-hook 'org-mode-hook 'turn-on-flyspell))
+
+
 ;; emoji
 (use-package emoji-cheat-sheet-plus
     :defer t
@@ -32,7 +47,7 @@
       ;; enabled emoji in buffer
       (add-hook 'org-mode-hook 'emoji-cheat-sheet-plus-display-mode)
       ;; insert emoji with helm
-      (global-set-key (kbd "C-c C-e") 'emoji-cheat-sheet-plus-insert)))
+      (global-set-key (kbd "C-c m e") 'emoji-cheat-sheet-plus-insert)))
 
 
 ;; close-all-buffer command
@@ -112,6 +127,10 @@
 (setq evil-move-cursor-back nil)
 
 
+;; org-mode
+(eval-after-load "org"
+  '(require 'ox-gfm nil t))
+
 ;; lsp setting
 (load! "~/.doom.d/lsp.el")
 
@@ -129,6 +148,6 @@
 
 
 ;;typescript setting
-(use-package typescript-mode
-  :hook #'lsp)
-;; (add-hook typescript-mode-hook #'lsp)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-hook 'typescript-mode-hook #'lsp)
+(add-hook 'typescript-mode-hook 'prettier-js-mode)
