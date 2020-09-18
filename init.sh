@@ -109,7 +109,7 @@ alias gh='hub browse $(ghq list | fzf | cut -d "/" -f 2,3)'
 EOS
 
 # emacs setting
-echo "alias emacs='emacsclient -n'" >> $HOME/.zshrc
+echo "alias ec='emacsclient -n'" >> $HOME/.zshrc
 
 
 echo "==============="
