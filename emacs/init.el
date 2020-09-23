@@ -292,6 +292,15 @@
             (prescient-save-file . ,(locate-user-emacs-file "prescient")))
   :global-minor-mode prescient-persist-mode)
 
+(leaf pangu-spacing
+  :doc "Minor-mode to add space between Chinese and English characters."
+  :added "2020-09-23"
+  :url "http://github.com/coldnew/pangu-spacing"
+  :ensure t
+  :custom ((pangu-spacing-real-insert-separtor . t))
+  :init (global-pangu-spacing-mode 1)
+  )
+
 (leaf tramp
   :doc "Transparent Remote Access, Multiple Protocol"
   :tag "builtin"
@@ -693,7 +702,10 @@
   :doc "Github Flavored Markdown Back-End for Org Export Engine"
   :tag "github" "markdown" "wp" "org"
   :added "2020-08-27"
-  :ensure t)
+  :after org
+  :ensure t
+  :init
+  '(require 'ox-gfm nil t))
 
 (leaf calendar
   :doc "calendar functions"
