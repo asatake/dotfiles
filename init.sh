@@ -110,6 +110,8 @@ EOS
 
 # emacs setting
 echo "alias ec='emacsclient -n'" >> $HOME/.zshrc
+mkdir $HOME/.emacs.d
+cp ./emacs/initialize.el $HOME/.emacs.d/init.el
 
 
 echo "==============="
