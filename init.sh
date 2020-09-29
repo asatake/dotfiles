@@ -24,17 +24,6 @@ function install_if_not_exists() {
     fi
 }
 
-# 手動でやったほうがいいかも
-function install_zprezto() {
-    zsh
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-        ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
-    chsh -s /bin/zsh
-}
-
 function install_fzf() {
     echo "Start installing fzf."
     success=install_package fzf
@@ -70,7 +59,6 @@ install_if_not_exists curl
 install_if_not_exists alacritty
 install_if_not_exists go
 
-install_zprezto
 install_fzf
 install_ghq
 install_nvm
