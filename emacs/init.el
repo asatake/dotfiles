@@ -128,7 +128,7 @@
 
 (setq default-frame-alist
       '(
-        (font . "Cica 16")))
+        (font . "Cica 12")))
 
 (defconst my:d:tmp (expand-file-name "tmp/" user-emacs-directory))
 
@@ -298,7 +298,8 @@
   :url "http://github.com/coldnew/pangu-spacing"
   :ensure t
   :custom ((pangu-spacing-real-insert-separtor . t))
-  :init (global-pangu-spacing-mode 1)
+  :hook ((text-mode-hook . pangu-spacing-mode)
+         (org-mode-hook . pangu-spacing-mode))
   )
 
 (leaf tramp
@@ -567,7 +568,22 @@
   :doc "Export Framework for Org Mode"
   :tag "builtin"
   :added "2020-08-28"
-  :custom (org-startup-indented . t))
+  :custom
+  ((org-startup-indented . t)
+   (org-structure-template-alist . '(("a" . "export ascii\n")
+                                     ("c" . "center\n")
+                                     ("C" . "comment\n")
+                                     ("e" . "example\n")
+                                     ("E" . "export")
+                                     ("h" . "export html\n")
+                                     ("l" . "export latex\n")
+                                     ("q" . "quote\n")
+                                     ("s" . "src\n")
+                                     ("v" . "verse\n")))
+   )
+  :custom
+  '((org-modules . (org-modules org-tempo)))
+  )
 
 ;; Languages
 (leaf go-mode
@@ -673,7 +689,16 @@
   :url "https://github.com/lurdan/ob-typescript"
   :emacs>= 24
   :ensure t
-  :after org)
+  :after org
+  :custom
+  ((org-plantuml-jar-path . "~/.emacs.d/plantuml/plantuml.jar"))
+  :init
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((plantuml . t)
+     (ditaa . t)
+     (dot . t)))
+  )
 
 (leaf prettier-js
   :doc "Minor mode to format JS code on file save"
