@@ -373,22 +373,11 @@
          (company-search-map
           ("C-n" . company-select-next)
           ("C-p" . company-select-previous)))
-  :custom ((company-idle-delay . 0)
+  :custom ((company-idle-delay . 0.0)
            (company-minimum-prefix-length . 1)
-           (company-transformers . '(company-sort-by-occurrence)))
+           ;; (company-transformers . '(company-sort-by-occurrence))
+           )
   :global-minor-mode global-company-mode
-  :init
-  (leaf company-c-headers
-    :doc "Company mode backend for C/C++ header files"
-    :req "emacs-24.1" "company-0.8"
-    :tag "company" "development" "emacs>=24.1"
-    :added "2020-03-25"
-    :emacs>= 24.1
-    :ensure t
-    :after company
-    :defvar company-backends
-    :config
-    (add-to-list 'company-backends 'company-c-headers))
   )
 
 (leaf eldoc
@@ -438,17 +427,21 @@
   :ensure t
   :after spinner markdown-mode lv
   :custom
-  `((lsp-signature-auto-activate . t)
-    (lsp-signature-doc-lines     . 1)
-    (lsp-log-io                  . nil)
-    (lsp-trace                   . nil)
-    (lsp-print-performance       . nil)
-    (lsp-auto-guess-root         . t)
-    (lsp-document-sync-method    . 'lsp--sync-incremental)
-    (lsp-response-timeout        . 5)
-    (lsp-idle-delay              . 0.5)
-    (lsp-enable-file-watchers    . t)
-    (lsp-completion-provider     . :capf))
+  `((lsp-signature-auto-activate        . t)
+    (lsp-signature-doc-lines            . 1)
+    (lsp-print-performance              . t)
+    (lsp-log-io                         . t)
+    (lsp-keep-workspace-alive           . nil)
+    (lsp-enable-snippet                 . t)
+    (lsp-server-trace                   . nil)
+    (lsp-auto-guess-root                . t)
+    (lsp-document-sync-method           . 'lsp--sync-incremental)
+    (lsp-diagnostics-provider           . :flycheck)
+    (lsp-response-timeout               . 5)
+    (lsp-idle-delay                     . 0.500)
+    (lsp-enable-file-watchers           . t)
+    (lsp-completion-provider            . :capf)
+    (lsp-headerline-breadcrumb-segments . '(symbols)))
   :init
   (leaf lsp-ui
     :doc "UI modules for lsp-mode"
@@ -474,9 +467,18 @@
      (lsp-ui-peek-list-width       . 50)
      (lsp-ui-peek-fontify          . 'on-demand) ;; never, on-demand, or always
      ))
+  (leaf lsp-treemacs
+    :doc "LSP treemacs"
+    :req "emacs-26.1" "dash-2.14.1" "dash-functional-2.14.1" "f-0.20.0" "ht-2.0" "treemacs-2.5" "lsp-mode-6.0"
+    :tag "languages" "emacs>=26.1"
+    :added "2020-10-22"
+    :url "https://github.com/emacs-lsp/lsp-treemacs"
+    :emacs>= 26.1
+    :ensure t
+    :after treemacs lsp-mode)
   :hook ((prog-major-mode . lsp-prog-major-mode-enable)
          (lsp-mode-hook . lsp-ui-mode)
-         (lsp-managed-mode . (lambda () (setq-local company-backends '(company-capf)))))
+         (lsp-mode-hook . lsp-headerline-breadcrumb-mode))
   )
 (leaf lsp-ivy
   :doc "LSP ivy integration"
