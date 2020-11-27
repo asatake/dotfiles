@@ -1,4 +1,4 @@
-;;; init.el --- My init.el  -*- lexical-binding: t; -*-
+;; init.el --- My init.el  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Taketo Asai
 
@@ -64,7 +64,11 @@
   (leaf leaf-tree
     :ensure t
     :custom ((imenu-list-size . 30)
-             (imenu-list-position . 'left))))
+             (imenu-list-position . 'left)))
+  :init
+  (server-start)
+  (global-git-gutter-mode +1)
+  )
 
 (leaf macrostep
   :ensure t
@@ -101,7 +105,7 @@
             (user-mail-address . "asataken@gmail.com")
             (user-login-name . "asatake")
             (create-lockfiles . nil)
-            (debug-on-error . t)
+            (debug-on-error . nil)
             (init-file-debug . t)
             (frame-resize-pixelwise . t)
             (enable-recursive-minibuffers . t)
@@ -124,7 +128,7 @@
   (keyboard-translate ?\C-h ?\C-?))
 
 (setq gc-cons-threshold 12800000)
-(setq read-process-output-max (* 1024 1024))
+(setq read-process-output-max (* 1024 1024 3))
 
 (setq default-frame-alist
       '(
@@ -139,7 +143,11 @@
   :added "2020-08-27"
   :url "https://github.com/purcell/exec-path-from-shell"
   :emacs>= 24.1
-  :ensure t)
+  :ensure t
+  :custom
+  ((exec-path-from-shell-arguments . ""))
+  :init
+  (exec-path-from-shell-initialize))
 
 (leaf autorevert
   :doc "revert buffers when files on disk change"
@@ -278,7 +286,28 @@
   :emacs>= 25.1
   :ensure t
   :after all-the-icons shrink-path
+  :custom
+  ((doom-modeline-env-version . t)
+   (doom-modeline-vcs-max-length . 12)
+   (doom-modeline-workspace-name . t))
   :init (doom-modeline-mode 1))
+
+(leaf hl-todo
+  :doc "highlight TODO and similar keywords"
+  :req "emacs-25"
+  :tag "convenience" "emacs>=25"
+  :added "2020-11-24"
+  :url "https://github.com/tarsius/hl-todo"
+  :emacs>= 25
+  :ensure t
+  :global-minor-mode t
+  :custom
+  (hl-todo-keyword-faces . '(("TODO"   . "#FF4500")
+                             ("FIXME"  . "#DDAE13")
+                             ("DEBUG"  . "#1E90FF")))
+  :init
+  (global-hl-todo-mode t)
+  )
 
 (leaf prescient
   :doc "Better sorting and filtering"
@@ -301,6 +330,16 @@
   :hook ((text-mode-hook . pangu-spacing-mode)
          (org-mode-hook . pangu-spacing-mode))
   )
+
+(leaf projectile
+  :doc "Manage and navigate projects in Emacs easily"
+  :req "emacs-25.1" "pkg-info-0.4"
+  :tag "convenience" "project" "emacs>=25.1"
+  :added "2020-10-26"
+  :url "https://github.com/bbatsov/projectile"
+  :emacs>= 25.1
+  :ensure t
+  :global-minor-mode t)
 
 (leaf tramp
   :doc "Transparent Remote Access, Multiple Protocol"
@@ -373,7 +412,7 @@
          (company-search-map
           ("C-n" . company-select-next)
           ("C-p" . company-select-previous)))
-  :custom ((company-idle-delay . 0.0)
+  :custom ((company-idle-delay . 0.2)
            (company-minimum-prefix-length . 1)
            ;; (company-transformers . '(company-sort-by-occurrence))
            )
@@ -417,6 +456,27 @@
   :after dumb-jump
   :config (smart-jump-setup-default-registers))
 
+(leaf dap-mode
+  :doc "Debug Adapter Protocol mode"
+  :req "emacs-26.1" "dash-2.14.1" "lsp-mode-6.0" "dash-functional-1.2.0" "bui-1.1.0" "f-0.20.0" "s-1.12.0" "lsp-treemacs-0.1" "posframe-0.7.0"
+  :tag "debug" "languages" "emacs>=26.1"
+  :added "2020-10-30"
+  :url "https://github.com/yyoncho/dap-mode"
+  :emacs>= 26.1
+  :ensure t
+  :after lsp-mode bui lsp-treemacs posframe
+  :custom
+  '(dap-auto-configure-features . '(sessions locals controls tooltip))
+  )
+
+(leaf yasnippet
+  :doc "Yet another snippet extension for Emacs"
+  :req "cl-lib-0.5"
+  :tag "emulation" "convenience"
+  :added "2020-10-30"
+  :url "http://github.com/joaotavora/yasnippet"
+  :ensure t)
+
 (leaf lsp-mode
   :doc "LSP mode"
   :req "emacs-26.1" "dash-2.14.1" "dash-functional-2.14.1" "f-0.20.0" "ht-2.0" "spinner-1.7.3" "markdown-mode-2.3" "lv-0"
@@ -427,21 +487,38 @@
   :ensure t
   :after spinner markdown-mode lv
   :custom
-  `((lsp-signature-auto-activate        . t)
+  `((lsp-keymap-prefix                  . "C-c l")
+    (lsp-inhibit-message                . t)
+    (lsp-message-project-root-warning   . t)
+    (create-lockfiles                   . nil)
+    (lsp-signature-auto-activate        . t)
     (lsp-signature-doc-lines            . 1)
     (lsp-print-performance              . t)
     (lsp-log-io                         . t)
+    (lsp-eldoc-render-all               . t)
+    (lsp-enable-completion-at-point     . t)
+    (lsp-enable-xref                    . t)
     (lsp-keep-workspace-alive           . nil)
     (lsp-enable-snippet                 . t)
     (lsp-server-trace                   . nil)
-    (lsp-auto-guess-root                . t)
-    (lsp-document-sync-method           . 'lsp--sync-incremental)
+    (lsp-auto-guess-root                . nil)
+    ;; (lsp-document-sync-method           . 'lsp--sync-incremental)
+    (lsp-document-sync-method           . 2)
     (lsp-diagnostics-provider           . :flycheck)
     (lsp-response-timeout               . 5)
     (lsp-idle-delay                     . 0.500)
-    (lsp-enable-file-watchers           . t)
+    (lsp-enable-file-watchers           . nil)
     (lsp-completion-provider            . :capf)
     (lsp-headerline-breadcrumb-segments . '(symbols)))
+  :hook ((prog-major-mode . lsp-prog-major-mode-enable)
+         (lsp-mode-hook . lsp-ui-mode)
+         (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
+         (go-mode-hook . lsp)
+         (typescript-mode-hook . lsp)
+         (python-mode-hook . (lambda ()
+                               (require 'lsp-pyright)
+                               (lsp)))
+         )
   :init
   (leaf lsp-ui
     :doc "UI modules for lsp-mode"
@@ -454,6 +531,7 @@
     :after lsp-mode markdown-mode
     :custom
     ((lsp-ui-doc-enable            . t)
+     (lsp-ui-doc-deley             . 0.5)
      (lsp-ui-doc-header            . t)
      (lsp-ui-doc-include-signature . t)
      (lsp-ui-doc-position          . 'at-point)
@@ -461,12 +539,14 @@
      (lsp-ui-doc-max-height        . 30)
      (lsp-ui-doc-use-childframe    . nil)
      (lsp-ui-doc-use-webkit        . nil)
-     (lsp-ui-flycheck-enable       . nil)
+     (lsp-ui-flycheck-enable       . t)
      (lsp-ui-peek-enable           . t)
      (lsp-ui-peek-peek-height      . 20)
      (lsp-ui-peek-list-width       . 50)
      (lsp-ui-peek-fontify          . 'on-demand) ;; never, on-demand, or always
-     ))
+     )
+    :hook ((lsp-mode-hook . lsp-ui-mode))
+    )
   (leaf lsp-treemacs
     :doc "LSP treemacs"
     :req "emacs-26.1" "dash-2.14.1" "dash-functional-2.14.1" "f-0.20.0" "ht-2.0" "treemacs-2.5" "lsp-mode-6.0"
@@ -476,20 +556,7 @@
     :emacs>= 26.1
     :ensure t
     :after treemacs lsp-mode)
-  :hook ((prog-major-mode . lsp-prog-major-mode-enable)
-         (lsp-mode-hook . lsp-ui-mode)
-         (lsp-mode-hook . lsp-headerline-breadcrumb-mode))
   )
-(leaf lsp-ivy
-  :doc "LSP ivy integration"
-  :req "emacs-25.1" "dash-2.14.1" "lsp-mode-6.2.1" "ivy-0.13.0"
-  :tag "debug" "languages" "emacs>=25.1"
-  :added "2020-08-27"
-  :url "https://github.com/emacs-lsp/lsp-ivy"
-  :emacs>= 25.1
-  :ensure t
-  :after lsp-mode ivy
-  :custom ((lsp-ivy-global-workspace-symbol . t)))
 
 (leaf lsp-pyright
   :doc "Python LSP client using Pyright"
@@ -499,7 +566,7 @@
   :url "https://github.com/emacs-lsp/lsp-pyright"
   :emacs>= 26.1
   :ensure t
-  :after lsp-mode)
+  :after python-mode lsp-mode)
 
 (leaf magit
   :doc "A Git porcelain inside Emacs."
@@ -594,7 +661,16 @@
   :added "2020-08-27"
   :url "https://github.com/dominikh/go-mode.el"
   :ensure t
-  :hook ((go-mode-hook . lsp)))
+  :hook (('before-save-hook . 'gofmt-before-save))
+  :init
+  (leaf company-go
+    :doc "company-mode backend for Go (using gocode)"
+    :req "company-0.8.0" "go-mode-1.0.0"
+    :tag "languages"
+    :added "2020-10-30"
+    :ensure t
+    :after company go-mode)
+  )
 
 (leaf python-mode
   :doc "Python major mode"
@@ -612,9 +688,7 @@
     :emacs>= 24.4
     :ensure t
     :after company highlight-indentation pyvenv yasnippet)
-  :hook ((python-mode-hook . (lambda ()
-                               (require 'lsp-pyright)
-                               (lsp)))))
+  )
 
 (leaf web-mode
   :doc "major mode for editing web templates"
@@ -633,10 +707,7 @@
   :url "http://github.com/ananthakumaran/typescript.el"
   :emacs>= 24.3
   :ensure t
-  :hook (
-         (typescript-mode-hook . tide-mode)
-         (typescript-mode-hook . lsp)
-         (typescript-mode-hook . prettier-js-mode)))
+  )
 
 (leaf json-mode
   :doc "Major mode for editing JSON files."
@@ -676,11 +747,29 @@
   :ensure t
   :after docker-tramp json-mode tablist)
 
+(leaf dockerfile-mode
+  :doc "Major mode for editing Docker's Dockerfiles"
+  :req "emacs-24" "s-1.12"
+  :tag "emacs>=24"
+  :added "2020-11-25"
+  :url "https://github.com/spotify/dockerfile-mode"
+  :emacs>= 24
+  :ensure t)
+
 (leaf sqlup-mode
   :doc "Upcase SQL words for you"
   :tag "upcase" "redis" "tools" "sql"
   :added "2020-08-27"
   :url "https://github.com/trevoke/sqlup-mode.el"
+  :ensure t)
+
+(leaf csv-mode
+  :doc "Major mode for editing comma/char separated values"
+  :req "emacs-24.1" "cl-lib-0.5"
+  :tag "convenience" "emacs>=24.1"
+  :added "2020-11-04"
+  :url "http://elpa.gnu.org/packages/csv-mode.html"
+  :emacs>= 24.1
   :ensure t)
 
 (leaf ob-typescript
@@ -707,7 +796,8 @@
   :tag "js" "edit" "wp" "convenience"
   :added "2020-08-27"
   :url "https://github.com/prettier/prettier-emacs"
-  :ensure t)
+  :ensure t
+  :hook ((typescript-mode-hook . prettier-js-mode)))
 
 (leaf tide
   :doc "Typescript Interactive Development Environment"
@@ -717,7 +807,8 @@
   :url "http://github.com/ananthakumaran/tide"
   :emacs>= 25.1
   :ensure t
-  :after flycheck typescript-mode)
+  :after flycheck typescript-mode
+  :hook ((typescript-mode-hook . tide-mode)))
 
 (leaf yapfify
   :doc "(automatically) format python buffers using YAPF."
@@ -759,10 +850,6 @@
   )
 
 (provide 'init)
-
-(global-git-gutter-mode +1)
-(exec-path-from-shell-initialize)
-(server-start)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
