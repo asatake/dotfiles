@@ -127,8 +127,8 @@
   (defalias 'yes-or-no-p 'y-or-n-p)
   (keyboard-translate ?\C-h ?\C-?))
 
-(setq gc-cons-threshold 12800000)
-(setq read-process-output-max (* 1024 1024 3))
+(setq gc-cons-threshold 25600000)
+(setq read-process-output-max (* 1024 1024 4))
 
 (setq default-frame-alist
       '(
@@ -383,6 +383,25 @@
     :after flycheck package-lint)
   )
 
+(leaf flyspell
+  :doc "On-the-fly spell checker"
+  :tag "builtin"
+  :added "2021-01-04"
+  :hook
+  (text-mode-hook . flyspell-mode)
+  (org-mode-hook . flyspell-mode)
+  :init
+  (leaf flyspell-popup
+    :doc "Correcting words with Flyspell in popup menus"
+    :req "popup-0.5.0"
+    :tag "convenience"
+    :added "2021-01-04"
+    :url "https://github.com/xuchunyang/flyspell-popup"
+    :ensure t
+    :after flyspell
+    :hook (flyspell-mode-hook . flyspell-popup-auto-correct-mode))
+  )
+
 (leaf editorconfig
   :doc "EditorConfig Emacs Plugin"
   :req "cl-lib-0.5" "emacs-24"
@@ -510,15 +529,13 @@
     (lsp-enable-file-watchers           . nil)
     (lsp-completion-provider            . :capf)
     (lsp-headerline-breadcrumb-segments . '(symbols)))
-  :hook ((prog-major-mode . lsp-prog-major-mode-enable)
-         (lsp-mode-hook . lsp-ui-mode)
-         (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
-         (go-mode-hook . lsp)
-         (typescript-mode-hook . lsp)
-         (python-mode-hook . (lambda ()
-                               (require 'lsp-pyright)
-                               (lsp)))
-         )
+  :commands
+  (lsp lsp-deferred)
+  :hook
+  (prog-major-mode . lsp-prog-major-mode-enable)
+  (lsp-mode-hook . lsp-ui-mode)
+  (lsp-mode-hook . lsp-headerline-breadcrumb-mode)
+  
   :init
   (leaf lsp-ui
     :doc "UI modules for lsp-mode"
@@ -556,17 +573,20 @@
     :emacs>= 26.1
     :ensure t
     :after treemacs lsp-mode)
-  )
+  (leaf lsp-pyright
+    :doc "Python LSP client using Pyright"
+    :req "emacs-26.1" "lsp-mode-7.0" "dash-2.14.1" "ht-2.0"
+    :tag "lsp" "tools" "languages" "emacs>=26.1"
+    :added "2020-09-09"
+    :url "https://github.com/emacs-lsp/lsp-pyright"
+    :emacs>= 26.1
+    :ensure t
+    :after python-mode lsp-mode
+    :setq-default
+    (flycheck-disabled-checkers . '(python-mypy))
+    )
 
-(leaf lsp-pyright
-  :doc "Python LSP client using Pyright"
-  :req "emacs-26.1" "lsp-mode-7.0" "dash-2.14.1" "ht-2.0"
-  :tag "lsp" "tools" "languages" "emacs>=26.1"
-  :added "2020-09-09"
-  :url "https://github.com/emacs-lsp/lsp-pyright"
-  :emacs>= 26.1
-  :ensure t
-  :after python-mode lsp-mode)
+  )
 
 (leaf magit
   :doc "A Git porcelain inside Emacs."
@@ -621,7 +641,12 @@
   :tag "builtin"
   :added "2020-08-27"
   :custom
-  (ispell-program-name . "aspell"))
+  (ispell-program-name . "aspell")
+  :config
+  (setq-default ispell-program-name "aspell")
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+"))
+)
+  
 
 (leaf emoji-cheat-sheet-plus
   :doc "emoji-cheat-sheet for emacs"
@@ -632,6 +657,15 @@
   :emacs>= 24
   :ensure t
   :after helm)
+
+(leaf hideshow
+  :doc "minor mode cmds to selectively display code/comment blocks"
+  :tag "builtin"
+  :added "2020-11-27"
+  :hook
+  ((typescript-mode-hook . (lambda ()
+                             (hs-minor-mode 1))))
+  )
 
 (leaf org
   :doc "Export Framework for Org Mode"
@@ -661,15 +695,9 @@
   :added "2020-08-27"
   :url "https://github.com/dominikh/go-mode.el"
   :ensure t
-  :hook (('before-save-hook . 'gofmt-before-save))
-  :init
-  (leaf company-go
-    :doc "company-mode backend for Go (using gocode)"
-    :req "company-0.8.0" "go-mode-1.0.0"
-    :tag "languages"
-    :added "2020-10-30"
-    :ensure t
-    :after company go-mode)
+  :hook
+  (before-save-hook . gofmt-before-save)
+  (go-mode-hook . lsp-deferred)
   )
 
 (leaf python-mode
@@ -679,6 +707,10 @@
   :bind
   ("C-c Y" . yapfify-buffer)
   ("C-c y" . yapfify-region)
+  :hook
+  (python-mode-hook . (lambda ()
+                        (require 'lsp-pyright)
+                        (lsp-deferred)))
   :init
   (leaf elpy
     :doc "Emacs Python Development Environment"
@@ -707,6 +739,8 @@
   :url "http://github.com/ananthakumaran/typescript.el"
   :emacs>= 24.3
   :ensure t
+  :hook
+  (typescript-mode-hook . tide-mode)
   )
 
 (leaf json-mode
@@ -808,7 +842,8 @@
   :emacs>= 25.1
   :ensure t
   :after flycheck typescript-mode
-  :hook ((typescript-mode-hook . tide-mode)))
+  :hook
+  (tide-mode-hook . lsp-deferred))
 
 (leaf yapfify
   :doc "(automatically) format python buffers using YAPF."
