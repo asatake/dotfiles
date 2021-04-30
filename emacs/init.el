@@ -26,14 +26,10 @@
 ;; this enables this running method
 ;;   emacs -q -l ~/.debug.emacs.d/init.el
 
-(setq byte-compile-warnings '(cl-functions))
+(setq byte-compile-warnings '(not cl-functions obsolute))
+(custom-set-variables '(warning-suppress-types '((comp))))
 
-(eval-and-compile
-  (when (or load-file-name byte-compile-current-file)
-    (setq user-emacs-directory
-          (expand-file-name
-           (file-name-directory (or load-file-name byte-compile-current-file))))))
-
+;; <leaf-install-code>
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
@@ -47,24 +43,24 @@
   (leaf leaf-keywords
     :ensure t
     :init
-    ;; optional packages if you want to use :hydra, :el-get, :blackout,,,
     (leaf hydra :ensure t)
     (leaf el-get :ensure t)
     (leaf blackout :ensure t)
 
     :config
-    ;; initialize leaf-keywords.el
-    (leaf-keywords-init)))
+    (leaf-keywords-init))
+  )
+;; </leaf-install-code>
 
 ;; USER SETTING
 
+(leaf leaf-convert :ensure)
+(leaf leaf-convert :ensure t)
+(leaf leaf-tree
+  :ensure t
+  :custom ((imenu-list-size . 30)
+           (imenu-list-position . 'left)))
 (leaf leaf
-  :config
-  (leaf leaf-convert :ensure t)
-  (leaf leaf-tree
-    :ensure t
-    :custom ((imenu-list-size . 30)
-             (imenu-list-position . 'left)))
   :init
   (server-start)
   (global-git-gutter-mode +1)
@@ -101,7 +97,8 @@
     (redraw-frame))
 
   :bind (("M-ESC ESC" . c/redraw-frame))
-  :custom '((user-full-name . "Taketo Asai")
+  :custom '((byte-compile-warnings . '(not cl-functions obsolute))
+            (user-full-name . "Taketo Asai")
             (user-mail-address . "asataken@gmail.com")
             (user-login-name . "asatake")
             (create-lockfiles . nil)
@@ -127,8 +124,8 @@
   (defalias 'yes-or-no-p 'y-or-n-p)
   (keyboard-translate ?\C-h ?\C-?))
 
-(setq gc-cons-threshold 25600000)
-(setq read-process-output-max (* 1024 1024 4))
+(setq gc-cons-threshold 16777216)
+(setq read-process-output-max (* 1024 1024 2))
 
 (setq default-frame-alist
       '(
@@ -145,7 +142,8 @@
   :emacs>= 24.1
   :ensure t
   :custom
-  ((exec-path-from-shell-arguments . ""))
+  (exec-path-from-shell-arguments . "")
+  (exec-path-from-shell-variables . '("PATH" "GOPATH"))
   :init
   (exec-path-from-shell-initialize))
 
@@ -169,6 +167,11 @@
   :doc "delete selection if you insert"
   :tag "builtin"
   :global-minor-mode delete-selection-mode)
+
+(leaf cl-lib
+  :doc "Common Lisp extensions for Emacs"
+  :tag "builtin"
+  :added "2021-04-09")
 
 (leaf undo-tree
   :doc "Treat undo history as a tree"
@@ -573,19 +576,6 @@
     :emacs>= 26.1
     :ensure t
     :after treemacs lsp-mode)
-  (leaf lsp-pyright
-    :doc "Python LSP client using Pyright"
-    :req "emacs-26.1" "lsp-mode-7.0" "dash-2.14.1" "ht-2.0"
-    :tag "lsp" "tools" "languages" "emacs>=26.1"
-    :added "2020-09-09"
-    :url "https://github.com/emacs-lsp/lsp-pyright"
-    :emacs>= 26.1
-    :ensure t
-    :after python-mode lsp-mode
-    :setq-default
-    (flycheck-disabled-checkers . '(python-mypy))
-    )
-
   )
 
 (leaf magit
@@ -645,8 +635,8 @@
   :config
   (setq-default ispell-program-name "aspell")
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+"))
-)
-  
+  )
+
 
 (leaf emoji-cheat-sheet-plus
   :doc "emoji-cheat-sheet for emacs"
@@ -686,6 +676,8 @@
    )
   :custom
   '((org-modules . (org-modules org-tempo)))
+  :hook
+  (org-mode-hook . hl-todo-mode)
   )
 
 ;; Languages
@@ -720,6 +712,18 @@
     :emacs>= 24.4
     :ensure t
     :after company highlight-indentation pyvenv yasnippet)
+  (leaf lsp-pyright
+    :doc "Python LSP client using Pyright"
+    :req "emacs-26.1" "lsp-mode-7.0" "dash-2.14.1" "ht-2.0"
+    :tag "lsp" "tools" "languages" "emacs>=26.1"
+    :added "2020-09-09"
+    :url "https://github.com/emacs-lsp/lsp-pyright"
+    :emacs>= 26.1
+    :ensure t
+    :after python-mode lsp-mode
+    :setq-default
+    (flycheck-disabled-checkers . '(python-mypy))
+    )
   )
 
 (leaf web-mode
@@ -741,6 +745,35 @@
   :ensure t
   :hook
   (typescript-mode-hook . tide-mode)
+  )
+
+(leaf haskell-mode
+  :doc "A Haskell editing mode"
+  :req "emacs-25.1"
+  :tag "haskell" "files" "faces" "emacs>=25.1"
+  :added "2021-04-08"
+  :url "https://github.com/haskell/haskell-mode"
+  :emacs>= 25.1
+  :ensure t
+  :init
+  (leaf company-ghci
+    :doc "company backend which uses the current ghci process."
+    :req "company-0.8.11" "haskell-mode-13"
+    :added "2021-04-08"
+    :ensure t
+    :after company haskell-mode)
+  (leaf lsp-haskell
+    :doc "Haskell support for lsp-mode"
+    :req "emacs-24.3" "lsp-mode-3.0" "haskell-mode-1.0"
+    :tag "haskell" "emacs>=24.3"
+    :added "2021-04-08"
+    :url "https://github.com/emacs-lsp/lsp-haskell"
+    :emacs>= 24.3
+    :ensure t
+    :after lsp-mode haskell-mode
+    :custom
+    (lsp-haskell-process-path-hie . "haskell-language-server-wrapper")
+    )
   )
 
 (leaf json-mode
@@ -886,10 +919,22 @@
 
 (provide 'init)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(transient-dwim leaf-convert leaf-tree leaf-keywords hydra el-get blackout)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 ;; Local Variables:
 ;; indent-tabs-mode: nil
-;; byte-compile-warnings: (not cl-functions obsolete)
+;; byte-compile-warnings: (not cl cl-functions obsolete)
 ;; End:
 
 ;;; init.el ends here
-

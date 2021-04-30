@@ -26,14 +26,9 @@
 ;; this enables this running method
 ;;   emacs -q -l ~/.debug.emacs.d/init.el
 
-(setq byte-compile-warnings '(cl-functions))
+(custom-set-variables '(warning-suppress-types '((comp))))
 
-(eval-and-compile
-  (when (or load-file-name byte-compile-current-file)
-    (setq user-emacs-directory
-          (expand-file-name
-           (file-name-directory (or load-file-name byte-compile-current-file))))))
-
+;; <leaf-install-code>
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
@@ -47,14 +42,14 @@
   (leaf leaf-keywords
     :ensure t
     :init
-    ;; optional packages if you want to use :hydra, :el-get, :blackout,,,
     (leaf hydra :ensure t)
     (leaf el-get :ensure t)
     (leaf blackout :ensure t)
 
     :config
-    ;; initialize leaf-keywords.el
-    (leaf-keywords-init)))
+    (leaf-keywords-init))
+  )
+;; </leaf-install-code>
 
 ;; USER SETTING
 
@@ -62,7 +57,6 @@
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
-;; byte-compile-warnings: (not cl-functions obsolete)
 ;; End:
 
 ;;; init.el ends here
