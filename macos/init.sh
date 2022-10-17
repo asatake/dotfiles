@@ -41,7 +41,11 @@ brew bundle
 ## tmux
 mkdir -p ~/.config/tmux
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/.tmux.conf > ~/.config/tmux/.tmux.conf
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ -e ~/.tmux/plugins/tpm ]; then
+    echo "tpm has already installed."
+else
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 ## starship
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml > ~/.config/starship.toml
