@@ -50,12 +50,21 @@ mkdir -p ~/.config/alacritty
 wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml -o ~/.config/alacritty/alacritty.yml
 
 ## asdf
-asdf plugin add direnv https://github.com/asdf-community/asdf-direnv
-asdf install direnv 2.32.0
-asdf plugin add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang 1.9
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs lts
+if exists "direnv"; then
+    asdf plugin add direnv https://github.com/asdf-community/asdf-direnv
+    asdf install direnv 2.32.0
+    asdf global direnv 2.32.0
+fi
+if exists "go"; then
+    asdf plugin add golang https://github.com/kennyp/asdf-golang.git
+    asdf install golang 1.19
+    asdf global golang 1.19.2
+fi
+if exists "node"; then
+    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    asdf install nodejs lts
+    asdf global nodejs lts
+fi
 asdf plugin add python https://github.com/asdf-community/asdf-python.git
 asdf install python 3.10.8
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
