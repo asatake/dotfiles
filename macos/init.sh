@@ -41,6 +41,7 @@ brew bundle
 ## tmux
 mkdir -p ~/.config/tmux
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/.tmux.conf > ~/.config/tmux/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## starship
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml > ~/.config/starship.toml
@@ -51,32 +52,41 @@ curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacri
 
 ## asdf
 
-if exists "direnv"; then
+if [[ -z $(asdf list direnv) ]]; then
     echo "direnv has already installed."
 else
     asdf plugin add direnv https://github.com/asdf-community/asdf-direnv
     asdf install direnv 2.32.0
     asdf global direnv 2.32.0
 fi
-if exists "go"; then
+if [[ -z $(asdf list golang) ]]; then
     echo "golang has already installed."
 else
     asdf plugin add golang https://github.com/kennyp/asdf-golang.git
     asdf install golang 1.19.2
     asdf global golang 1.19.2
 fi
-if exists "node"; then
+if [[ -z $(asdf list nodejs) ]]; then
     echo "nodejs has already installed."
 else
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     asdf install nodejs lts
     asdf global nodejs lts
 fi
-asdf plugin add python https://github.com/asdf-community/asdf-python.git
-asdf install python 3.10.8
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby 3.0.1
-asdf plugin add rust https://github.com/asdf-community/asdf-rust.git
+if [[ -z $(asdf list python) ]]; then
+    echo "python has already installed."
+else
+    asdf plugin add python https://github.com/asdf-community/asdf-python.git
+    asdf install python 3.10.8
+    asdf global python 3.10.8
+fi
+if [[ -z $(asdf list ruby) ]]; then
+    echo "ruby has already installed."
+else
+    asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+    asdf install ruby 3.0.1
+fi
+# asdf plugin add rust https://github.com/asdf-community/asdf-rust.git
 
 # dot config
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
