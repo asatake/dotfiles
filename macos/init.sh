@@ -18,7 +18,7 @@ cd ~/
 
 # install xcode developer tools
 if exists "xcode-select"; then
-    xcode-select --install
+    echo "xcode-select has installed."
 else
     echo "Require Xcode. Please install via AppStore."
     exit 2
@@ -29,6 +29,8 @@ if exists "brew"; then
     echo "Homebrew is already installed."
 else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Download Brewfile, and install

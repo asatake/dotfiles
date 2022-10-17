@@ -73,10 +73,13 @@ setup_colors
 msg "${CYAN}Read parameters:${NOFORMAT}"
 msg "- env: ${env}"
 
+cd /tmp
 if [ "$env" = "linux" ]; then
-    ./linux/init.sh
+    curl -OL https://raw.githubusercontent.com/asatake/dotfiles/main/linux/init.sh
+    /tmp/init.sh
 elif [ "$env" = "macos" ]; then
-    ./macos/init.sh
+    curl -OL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/init.sh
+    /tmp/init.sh
 else
     die "Invalid env: $env"
 fi
