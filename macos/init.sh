@@ -84,12 +84,18 @@ fi
 
 # dot config
 if [ -e "$HOME/.zshrc" ]; then
+    echo ".zshrc already exists."
+else
     curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
 fi
 if [ -e "$HOME/.zshenv" ]; then
+    echo ".zshenv already exists."
+else
     curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
 fi
 if [ -e "$HOME/.profile" ]; then
+    echo ".profile already exists."
+else
     curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
 fi
 
