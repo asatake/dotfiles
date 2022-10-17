@@ -50,6 +50,7 @@ mkdir -p ~/.config/alacritty
 wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml -o ~/.config/alacritty/alacritty.yml
 
 ## asdf
+
 if exists "direnv"; then
     echo "direnv has already installed."
 else
