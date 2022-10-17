@@ -39,7 +39,9 @@ brew bundle
 
 # config
 ## tmux
-mkdir -p ~/.config/tmux
+if [ ! -d "$HOME/.config/tmux" ]; then
+    mkdir -p ~/.config/tmux
+fi
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/.tmux.conf > ~/.config/tmux/.tmux.conf
 if [ -e ~/.tmux/plugins/tpm ]; then
     echo "tpm has already installed."
@@ -48,11 +50,17 @@ else
 fi
 
 ## starship
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml > ~/.config/starship.toml
+if [ ! -e "$HOME/.config/starship.toml" ]; then
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml > ~/.config/starship.toml
+fi
 
 ## alacritty
-mkdir -p ~/.config/alacritty
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml > ~/.config/alacritty/alacritty.yml
+if [ ! -d "$HOME/.config/alacritty" ]; then
+    mkdir -p ~/.config/alacritty
+fi
+if [ -e "$HOME/.config/alacritty/alacritty.yml" ]; then
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml > ~/.config/alacritty/alacritty.yml
+fi
 
 ## asdf
 
@@ -65,6 +73,10 @@ if [[ -z $(asdf list golang) ]]; then
     asdf plugin add golang https://github.com/kennyp/asdf-golang.git
     asdf install golang 1.19.2
     asdf global golang 1.19.2
+
+    # install development tools
+    go install golang.org/x/tools/gopls@latest
+    go install github.com/nametake/golangci-lint-langserver@latest
 fi
 if [[ -z $(asdf list nodejs) ]]; then
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git

@@ -13,7 +13,7 @@ setup_colors() {
 
 usage() {
     cat <<EOF
-Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v] -e env_value
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v]
 
 Install some tools for development setup
 
@@ -21,7 +21,6 @@ Available options:
 
 -h, --help      Print this help and exit
 -v, --verbose   Print script debug info
--e, --env       Environment (linux or macos)
 EOF
     exit
 }
@@ -43,26 +42,16 @@ die() {
 }
 
 parse_params() {
-    # default values of variables set from params
-    env=''
-
     while :; do
         case "${1-}" in
             -h | --help) usage ;;
             -v | --verbose) set -x ;;
             --no-color) NO_COLOR=1 ;;
-            -e | --env)
-                env="${2-}"
-                shift
-                ;;
             -?*) die "Unknown option: $1" ;;
             *) break ;;
         esac
         shift
     done
-
-    # check required params and arguments
-    [[ -z "${env-}" ]] && usage
 
     return 0
 }
@@ -71,12 +60,12 @@ parse_params "$@"
 setup_colors
 
 msg "${CYAN}Read parameters:${NOFORMAT}"
-msg "- env: ${env}"
+platform=$(uname -s)
 
 cd /tmp
-if [ "$env" = "linux" ]; then
+if [ "$platform" = "Linux" ]; then
     curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/linux/init.sh | sh
-elif [ "$env" = "macos" ]; then
+elif [ "$platform" = "Darwin" ]; then
     curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/init.sh | sh
 else
     die "Invalid env: $env"
