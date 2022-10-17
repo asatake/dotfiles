@@ -90,7 +90,7 @@ curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profil
 # emacs
 export LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/12:/usr/local/opt/libgccjit/lib/gcc/12:/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin21/12
 export LSP_USE_PLISTS=true
-../shared/emacs/install.sh
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/install.sh | sh
 mkdir ~/.emacs.d
 curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/early-init.el > ~/.emacs.d/early-init.el
 /Applications/Emacs.app/Contents/MacOS/Emacs -Q -batch -f batch-byte-compile ~/.emacs.d/*.el
