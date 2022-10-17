@@ -40,14 +40,14 @@ brew bundle
 # config
 ## tmux
 mkdir -p ~/.config/tmux
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/.tmux.conf -o ~/.config/tmux/.tmux.conf
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/.tmux.conf > ~/.config/tmux/.tmux.conf
 
 ## starship
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml -o ~/.config/starship.toml
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/starship.toml > ~/.config/starship.toml
 
 ## alacritty
 mkdir -p ~/.config/alacritty
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml -o ~/.config/alacritty/alacritty.yml
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/alacritty.yml > ~/.config/alacritty/alacritty.yml
 
 ## asdf
 
@@ -79,18 +79,18 @@ asdf install ruby 3.0.1
 asdf plugin add rust https://github.com/asdf-community/asdf-rust.git
 
 # dot config
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc -o ~/.zshrc
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv -o ~/.zshenv
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile -o ~/.profile
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
 
 # emacs
 export LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/12:/usr/local/opt/libgccjit/lib/gcc/12:/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin21/12
 export LSP_USE_PLISTS=true
 ../shared/emacs/install.sh
 mkdir ~/.emacs.d
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/early-init.el -o ~/.emacs.d/early-init.el
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/early-init.el > ~/.emacs.d/early-init.el
 /Applications/Emacs.app/Contents/MacOS/Emacs -Q -batch -f batch-byte-compile ~/.emacs.d/*.el
-wget https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/init.el -o ~/.emacs.d/init.el
+curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/init.el > ~/.emacs.d/init.el
 
 # # install Rust (prompt input required)
 # install_rust
