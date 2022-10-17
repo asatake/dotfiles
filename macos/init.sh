@@ -68,8 +68,8 @@ if [[ -z $(asdf list golang) ]]; then
 fi
 if [[ -z $(asdf list nodejs) ]]; then
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    asdf install nodejs lts
-    asdf global nodejs lts
+    asdf install nodejs 16.18.0
+    asdf global nodejs 16.18.0
 fi
 if [[ -z $(asdf list python) ]]; then
     asdf plugin add python https://github.com/asdf-community/asdf-python.git
