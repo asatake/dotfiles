@@ -83,9 +83,15 @@ fi
 # asdf plugin add rust https://github.com/asdf-community/asdf-rust.git
 
 # dot config
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
+if [ -e "$HOME/.zshrc" ]; then
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
+fi
+if [ -e "$HOME/.zshenv" ]; then
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
+fi
+if [ -e "$HOME/.profile" ]; then
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
+fi
 
 # emacs
 export LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/12:/usr/local/opt/libgccjit/lib/gcc/12:/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin21/12
