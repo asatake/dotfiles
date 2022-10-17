@@ -1,3 +1,5 @@
 # dotfiles
 
-- 開発時に使っている dotfiles をまとめる
+```sh
+curl -OL https://raw.githubusercontent.com/asatake/dotfiles/main/install.sh /tmp && sh /tmp/install.sh
+```
