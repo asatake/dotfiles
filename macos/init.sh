@@ -100,15 +100,17 @@ else
 fi
 
 # emacs
-export LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/12:/usr/local/opt/libgccjit/lib/gcc/12:/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin21/12
-export LSP_USE_PLISTS=true
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/install.sh | sh
-if [ ! -d "$HOME/.emacs.d" ]; then
-    mkdir ~/.emacs.d
+if [ ! -d "/Application/Emacs.app" ]; then
+    export LIBRARY_PATH=/usr/local/opt/gcc/lib/gcc/12:/usr/local/opt/libgccjit/lib/gcc/12:/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin21/12
+    export LSP_USE_PLISTS=true
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/install.sh | sh
+    if [ ! -d "$HOME/.emacs.d" ]; then
+        mkdir ~/.emacs.d
+    fi
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/early-init.el > ~/.emacs.d/early-init.el
+    cp -r "$HOME/repos/emacs/nextstep/Emacs.app" /Applications/
+    /Applications/Emacs.app/Contents/MacOS/Emacs -Q -batch -f batch-byte-compile ~/.emacs.d/*.el
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/init.el > ~/.emacs.d/init.el
 fi
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/early-init.el > ~/.emacs.d/early-init.el
-/Applications/Emacs.app/Contents/MacOS/Emacs -Q -batch -f batch-byte-compile ~/.emacs.d/*.el
-curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/emacs/init.el > ~/.emacs.d/init.el
-
 # # install Rust (prompt input required)
 # install_rust
