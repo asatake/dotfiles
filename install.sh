@@ -75,11 +75,9 @@ msg "- env: ${env}"
 
 cd /tmp
 if [ "$env" = "linux" ]; then
-    curl -OL https://raw.githubusercontent.com/asatake/dotfiles/main/linux/init.sh
-    /tmp/init.sh
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/linux/init.sh | sh
 elif [ "$env" = "macos" ]; then
-    curl -OL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/init.sh
-    /tmp/init.sh
+    curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/init.sh | sh
 else
     die "Invalid env: $env"
 fi
