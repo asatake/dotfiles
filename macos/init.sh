@@ -66,8 +66,7 @@ fi
 
 if [[ -z $(asdf list direnv) ]]; then
     asdf plugin add direnv https://github.com/asdf-community/asdf-direnv
-    asdf install direnv 2.32.0
-    asdf global direnv 2.32.0
+    asdf direnv setup --shell zsh --version latest
 fi
 if [[ -z $(asdf list golang) ]]; then
     asdf plugin add golang https://github.com/kennyp/asdf-golang.git
