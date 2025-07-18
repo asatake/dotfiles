@@ -100,7 +100,7 @@ fi
 if [[ -z $(asdf list golang) ]]; then
   asdf plugin add golang https://github.com/kennyp/asdf-golang.git
   asdf install golang 1.24.3
-  asdf global golang 1.24.3
+  asdf set -u golang 1.24.3
 
   # install development tools
   go install golang.org/x/tools/gopls@latest
@@ -110,7 +110,7 @@ fi
 if [[ -z $(asdf list nodejs) ]]; then
   asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   asdf install nodejs 22.9.0
-  asdf global nodejs 22.9.0
+  asdf set -u nodejs 22.9.0
 
   npm install -g \
       eslint \
@@ -126,27 +126,27 @@ fi
 if [[ -z $(asdf list python) ]]; then
   asdf plugin add python https://github.com/asdf-community/asdf-python.git
   asdf install python 3.13.5
-  asdf global python 3.13.5
+  asdf set -u python 3.13.5
 fi
 if [[ -z $(asdf list ruby) ]]; then
   asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
   asdf install ruby 3.3.7
-  asdf global ruby 3.3.7
+  asdf set -u ruby 3.3.7
 fi
 if [[ -z $(asdf list ecspresso)]]; then
   asdf plugin add ecspresso
   asdf install ecspresso 2.5.0
-  asdf global ecspresso 2.5.0
+  asdf set -u ecspresso 2.5.0
 fi
 if [[ -z $(asdf list terraform)]]; then
   asdf plugin add terraform
   asdf install terraform 1.12.2
-  asdf global terraform 1.12.2
+  asdf set -u terraform 1.12.2
 fi
 if [[ -z $(asdf list java)]]; then
   asdf plugin add java
   asdf install java openjdk-21
-  asdf global java openjdk-21
+  asdf set -u java openjdk-21
 fi
 
 # emacs
