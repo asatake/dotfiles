@@ -133,17 +133,17 @@ if [[ -z $(asdf list ruby) ]]; then
   asdf install ruby 3.3.7
   asdf set -u ruby 3.3.7
 fi
-if [[ -z $(asdf list ecspresso)]]; then
+if [[ -z $(asdf list ecspresso) ]]; then
   asdf plugin add ecspresso
   asdf install ecspresso 2.5.0
   asdf set -u ecspresso 2.5.0
 fi
-if [[ -z $(asdf list terraform)]]; then
+if [[ -z $(asdf list terraform) ]]; then
   asdf plugin add terraform
   asdf install terraform 1.12.2
   asdf set -u terraform 1.12.2
 fi
-if [[ -z $(asdf list java)]]; then
+if [[ -z $(asdf list java) ]]; then
   asdf plugin add java
   asdf install java openjdk-21
   asdf set -u java openjdk-21
