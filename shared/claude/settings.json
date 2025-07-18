@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Zsh(ls:*)",
+      "Zsh(rg:*)",
+      "Bash(ls:*)",
+      "Bash(rg:*)",
+      "Bash(go test*)",
+      "Read(~/ghq/*)",
+      "Write(~/ghq/*)",
+      "List(*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(terraform apply:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Write(.env*)",
+      "Write(**/secrets/**)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm remove:*)",
+      "Bash(psql:*)",
+      "Bash(mysql:*)",
+      "Bash(mongod:*)",
+      "mcp__supabase__execute_sql"
+  ]
+  },
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL": "otlp"
+  }
+}

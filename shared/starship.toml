@@ -1,3 +1,6 @@
+format = "$all"
+command_timeout = 1000
+
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 
@@ -5,3 +8,15 @@ format = 'on [$symbol($profile )(\($region\) )]($style)'
 disabled = false
 added_style = "bold blue"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[time]
+disabled = false
+format = "🕙 [$time]($style) "
+
+[battery]
+disabled = false
+
+[localip]
+disabled = false
+ssh_only = false
+format = '@[$localipv4](red) '

@@ -6,7 +6,7 @@ zstyle ':completion:*:default' menu select=2
 
 setopt complete_in_word
 
-alias ls="exa"
+alias ls="eza"
 alias ll="ls -l"
 alias la="ls -la"
 alias tmux="tmux -f ~/.config/tmux/.tmux.conf"

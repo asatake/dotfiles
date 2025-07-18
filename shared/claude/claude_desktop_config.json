@@ -1,0 +1,116 @@
+{
+  "globalShortcut": "",
+  "mcpServers": {
+    "claude_code": {
+      "command": "/Users/tetsuhiromanome/.asdf/shims/claude",
+      "args": ["mcp", "serve"],
+      "env": {
+        "ASDF_DIR": "/Users/tetsuhiromanome/.asdf",
+        "ASDF_NODEJS_VERSION": "22.9.0",
+        "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+        "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc",
+        "PATH": "/Users/tetsuhiromanome/.asdf/shims:/Users/tetsuhiromanome/.asdf/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    },
+    "canva": {
+      "command": "/Users/tetsuhiromanome/.asdf/shims/npx",
+      "args": [
+        "-y",
+        "@canva/cli@latest",
+        "mcp"
+      ],
+      "envs": {
+        "ASDF_DIR": "/Users/tetsuhiromanome/.asdf",
+        "ASDF_NODEJS_VERSION": "22.9.0",
+        "CANVA_APP_ID": "AAGpeT2SUmE",
+        "CANVA_API_KEY": ""
+      }
+    },
+    "POKER ROOM redash": {
+      "command": "/Users/tetsuhiromanome/Downloads/redash-mcp-server/redash-mcp-server",
+      "env": {
+        "REDASH_API_KEY": "hQogVDdfvS4aqFal4Ab3Aacu2mw563dFbaWVgZTj",
+        "REDASH_HOST": "https://redash.pokerroom.co.jp"
+      }
+    },
+    "shortcut": {
+      "command": "/Users/tetsuhiromanome/.asdf/shims/npx",
+      "args": [
+        "-y",
+        "@shortcut/mcp"
+      ],
+      "env": {
+        "SHORTCUT_API_TOKEN": "9bd13501-1180-4159-a370-643da47a9e02",
+        "ASDF_DIR": "/Users/tetsuhiromanome/.asdf",
+        "ASDF_NODEJS_VERSION": "22.9.0"
+      }
+    },
+    "awslabs.core-mcp-server": {
+      "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+      "args": [
+        "awslabs.core-mcp-server@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "autoApprove": [],
+      "disabled": false
+    },
+    "awslabs.aws-documentation-mcp-server": {
+        "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+        "args": ["awslabs.aws-documentation-mcp-server@latest"],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR"
+        },
+        "disabled": false,
+        "autoApprove": []
+    },
+    "awslabs.bedrock-kb-retrieval-mcp-server": {
+      "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+      "args": ["awslabs.bedrock-kb-retrieval-mcp-server@latest"],
+      "env": {
+        "AWS_PROFILE": "default",
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "aws-knowledge-mcp-server": {
+      "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+      "args": [
+        "mcp-proxy",
+        "--transport",
+        "streamablehttp",
+        "https://knowledge-mcp.global.api.aws"
+      ],
+      "env": {
+        "AWS_PROFILE": "default",
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "awslabs.aws-pricing-mcp-server": {
+      "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+      "args": ["awslabs.aws-pricing-mcp-server@latest"],
+      "env": {
+        "AWS_PROFILE": "default",
+        "AWS_REGION": "ap-northeast-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "awslabs.terraform-mcp-server": {
+      "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+      "args": ["awslabs.terraform-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

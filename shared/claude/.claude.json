@@ -1,0 +1,2002 @@
+{
+  "numStartups": 139,
+  "installMethod": "local",
+  "autoUpdates": true,
+  "customApiKeyResponses": {
+    "approved": [
+      "yfmWJhIBEog-XGxg2gAA",
+      "Sm21ijz9GJw-VBpnlQAA"
+    ],
+    "rejected": []
+  },
+  "tipsHistory": {
+    "memory-command": 120,
+    "theme-command": 130,
+    "prompt-queue": 137,
+    "todo-list": 131,
+    "git-worktrees": 118,
+    "enter-to-steer-in-relatime": 103,
+    "# for memory": 138,
+    "install-github-app": 119,
+    "permissions": 122,
+    "drag-and-drop-images": 123,
+    "double-esc": 127,
+    "continue": 125,
+    "custom-commands": 115,
+    "shift-tab": 127
+  },
+  "promptQueueUseCount": 3,
+  "autoUpdaterStatus": "migrated",
+  "userID": "460dfbec827fd6db77c657b9c2550c79d1621441cf7b157bc4db89a8c38c8132",
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "0.2.19",
+  "projects": {
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api-manage": {
+      "allowedTools": [],
+      "context": {},
+      "history": [
+        "それらは、どのエンドポイントに関係しますか？",
+        "infrastructure/database 配下で、stores テーブルを更新しているメソッドがあるか調べてください",
+        "/cost ",
+        "app/infrastructure/database/ 配下のコードで、引数にsliceが渡されていて中で sqlx.In() を使って IN 句を実行しているメソッドの中で、引数のsliceのlenが0の場合に早期リターン(空のsliceをreturn)していない箇所を探して、直してください。",
+        "/cost ",
+        "app/infrastructure/database/ 配下のコードで、返り値がsliceなのにクエリの実行がGetContextになっているものがないか探して、もしあった場合は SelectContext になおしてください",
+        "/review ",
+        "/login"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "router.go",
+        "di.go",
+        "game_schedule_tournament_create_usecase.go",
+        "game_tournament.go"
+      ],
+      "exampleFilesGeneratedAt": 1744621262757,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.6860839999999999,
+      "lastAPIDuration": 108178,
+      "lastDuration": 1674993,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "8226b516-499e-4117-8e85-2cfa607a00f9"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api": {
+      "allowedTools": [
+        "Bash(gh pr:*)"
+      ],
+      "context": {},
+      "history": [
+        "今まで利用した利用明細をリストで取得するエンドポイントはありますか？あった場合、返却値も教えて下さい。",
+        "領収書の取得に関するエンドポイントはありますか？その場合、APIとして返却される json はどのような形になりますか？",
+        "infrastructure/database 配下で、stores テーブルの name カラムを参照して利用している箇所はありますか",
+        "/cost ",
+        "2 の custom_http_error_handler.go の151-184行目にリストされているエラー（例: チップ不足など）が発生した場合のうち、app/presentation/handler/user_chip.go の Find 関数で発生しうるものがあるか、関連ファイルを元に探してください。",
+        "ここで、app/presentation/custom_http_error_handler.go によると、handler 内で return err している場合の処理もあるようです。これを踏まえて、もう一度捜索してみてください",
+        "app/presentation/handler/user_chip.go の Find 関数で、最終的に Forbidden ステータスが返却されるような処理にはどのようなものがあるのかを、関連するファイルを検索しながら探してください",
+        "/cost ",
+        "api/app/infrastructure/database/ 配下のコードで、返り値がsliceなのにクエリの実行がGetContextになっているものがないか探して、もしあった場合は SelectContext になおしてください",
+        "/review ",
+        "プルリクエスト#673をレビューして",
+        "/review "
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "app/presentation/router.go",
+        "app/infrastructure/paymentmethod/stripe/api.go",
+        "app/presentation/handler/user_payment.go",
+        "app/domain/payment/repository/payment.go",
+        "app/usecase/user/payment/user_payment_process_usecase.go"
+      ],
+      "exampleFilesGeneratedAt": 1744623062937,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 1854,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "90c6b4bf-e2ad-445f-8fa4-f49a5f7538d8"
+    },
+    "/Users/tetsuhiromanome/sandbox/elisp/claude-code": {
+      "allowedTools": [],
+      "context": {},
+      "history": [
+        "結構動くようになりました。ありがとう。",
+        "error: unknown option '--interactive'\n\nProcess Claude Code exited abnormally with code 1",
+        "コマンドを送ったあと、エディタが固まってしまいます (C-g でキャンセルは可能)。おそらく、インタラクティブにyesなどを受け入れる動作をbuffer上で出来ないといけないのではないでしょうか？",
+        "同じコマンドで、まだ `funcall-interactively: Wrong type argument: processp, #<buffer *Claude Code*>` が出ます。",
+        "同じコマンドで、`funcall-interactively: Wrong type argument: processp, #<buffer *Claude Code*>` と出ました",
+        "`M-x claude-code-query このコードにハローワールドを追加してください` のように入力しました",
+        "まだ同じエラーが出ますね",
+        "/cost ",
+        "相変わらず `Wrong type argument: processp, #<buffer *Claude Code*>` が出ます",
+        "claude-code-query: Wrong type argument: processp, #<buffer *Claude Code*> と出ます",
+        "claude-code.el は .emacs.d/mylisp/claude-code.el という場所においています",
+        "claude-code.el を leaf.el によって起動時にロードするようにしたい",
+        "使い方を教えて",
+        "Claude Code を Emacs からインタラクティブに利用できるようにするための elisp を書いてください。",
+        "Claude Code を Emacs から使うための elisp を書いてください"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.45701575000000005,
+      "lastAPIDuration": 223199,
+      "lastDuration": 1095268,
+      "lastSessionId": "e838f8d2-daa7-46fd-925c-fa768c0f0c04"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/lambda-function-go/sync-main-payment-method-to-stripe": {
+      "allowedTools": [],
+      "context": {},
+      "history": [
+        "Improve this code: \n\npackage main\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\n\t\"github.com/aws/aws-lambda-go/lambda\"\n)\n\nfunc handler(ctx context.Context) error {\n\tfmt.Println(\"Hello, World!\")\n\treturn nil\n}\n\nfunc main() {\n\tfmt.Println(\"Hello, World!\")\n\tlambda.Start(handler)\n}\n\n",
+        "このコードにハローワールドを追加してください"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "mq.go",
+        "checkin.go",
+        "event.go",
+        "cloudfront.go"
+      ],
+      "exampleFilesGeneratedAt": 1741084064601,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.0206437,
+      "lastAPIDuration": 11719,
+      "lastDuration": 104050,
+      "lastSessionId": "4ffcbdbf-afe4-4336-a1d1-ed72ab553cf6"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/lambda-function-go": {
+      "allowedTools": [],
+      "context": {},
+      "history": [
+        "/cost ",
+        "sync-main-payment-method-to-stripe/main.go を編集してください。DB の store_main_payment_methods の情報を Stripe の customer のデフォルト支払い方法にするものです。"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "mq.go",
+        "checkin.go",
+        "event.go",
+        "cloudfront.go"
+      ],
+      "exampleFilesGeneratedAt": 1741084324479,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.23359309999999997,
+      "lastAPIDuration": 102764,
+      "lastDuration": 494177,
+      "lastSessionId": "a85c447f-e9d7-4bfd-8026-d37caad5f54e"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/lambda-function-go/shared/infrastructure/database/user/paymentmethod": {
+      "allowedTools": [],
+      "context": {},
+      "history": [
+        "Improve this code: \n\nSELECT\n\tucc.user_id,\n\tucc.external_customer_id AS customer_id,\n\tucm.external_payment_method_id AS payment_method_id\nFROM user_card_method_mains ucmm\nJOIN user_card_methods ucm ON ucm.id = ucmm.user_card_method_id\nJOIN user_card_customers ucc ON ucc.id = ucm.user_card_customer_id\nJOIN users u ON u.id = ucc.user_id\nWHERE u.deleted_at IS NULL\nAND ucm.is_active = TRUE;\n",
+        "SQLをレビューしてください。\n"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "mq.go",
+        "stripe.go",
+        "checkin.go",
+        "event.go"
+      ],
+      "exampleFilesGeneratedAt": 1741160001773,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.06506095,
+      "lastAPIDuration": 22260,
+      "lastDuration": 36134,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "273d9167-ba51-4fad-ad84-735af43edaf6"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api-manage/app/presentation/handler": {
+      "allowedTools": [],
+      "history": [
+        "/cost ",
+        "app/presentation/handler/payment.go の中の RequiresActionToPending を実装してください。必要に応じて適宜ソースコードを読み込みながらでお願いします。",
+        "/cost ",
+        "presentation handler の held_tournament.go 内の AdjustTotalChipAmount を実装してください。\n",
+        "presentation handler の held_tournament.go 内の FindChipAverage を実装してください\n"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "router.go",
+        "game_schedule_tournament_create_usecase.go",
+        "game_tournament.go",
+        "database.go"
+      ],
+      "exampleFilesGeneratedAt": 1742271254255,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.30414264999999996,
+      "lastAPIDuration": 62120,
+      "lastDuration": 115955,
+      "lastLinesAdded": 29,
+      "lastLinesRemoved": 1,
+      "lastSessionId": "ee7a3669-85d9-47ed-bb7c-c4cbeee6e733"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/tf-cloud-manager/aws/modules/jam": {
+      "allowedTools": [],
+      "history": [
+        "/cost ",
+        "変更してください",
+        "ユーザーはec2-userでないといけないのですが、このコマンドはec2-userで実行されますか？",
+        "aws_ssm_document.update_application で定義されている ssm document はどのようなものなのか、説明してください。もし不具合が起きそうな部分があれば指摘してください。"
+      ],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.tf",
+        "route_53.tf",
+        "iam.tf",
+        "securitygroup.tf",
+        "rds.tf"
+      ],
+      "exampleFilesGeneratedAt": 1742886643589,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.06515309999999999,
+      "lastAPIDuration": 24074,
+      "lastDuration": 426555,
+      "lastLinesAdded": 1,
+      "lastLinesRemoved": 2,
+      "lastSessionId": "44716afa-e090-4587-8e11-4b6d453fad42"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api-manage/app/infrastructure/database/order/custompayitem": {
+      "allowedTools": [],
+      "history": [
+        "/cost ",
+        "fix indent\n"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "app/presentation/router.go",
+        "main.go",
+        "app/usecase/gameschedule/tournament/game_schedule_tournament_create_usecase.go",
+        "app/presentation/handler/tournament_timer.go",
+        "app/core/apperror/errors.go"
+      ],
+      "exampleFilesGeneratedAt": 1743682345812,
+      "lastCost": 0.0901059,
+      "lastAPIDuration": 13383,
+      "lastDuration": 54947,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "7bde7869-346c-41e4-a592-c28d61462413"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/app": {
+      "allowedTools": [],
+      "history": [],
+      "dontCrawlDirectory": false,
+      "enableArchitectTool": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "approvedMcprcServers": [],
+      "rejectedMcprcServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "ModalFlipsReservationForPrivateTableConfirmation.tsx",
+        "users.ts",
+        "useOpenStripePaymentSheet.ts",
+        "ModalFlipsReservationEditConfirmationForPrivateTable.tsx",
+        "DeepLinkEffectManager.tsx"
+      ],
+      "exampleFilesGeneratedAt": 1743749506266
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/redash-mcp-server/redash": {
+      "allowedTools": [],
+      "history": [
+        "コメントで書かれたjsonの構造を、Query struct に実装してください。ネストされている場合は、ネストされた部分を別のstructとして実装してください。"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "lastCost": 0.10291715,
+      "lastAPIDuration": 26668,
+      "lastDuration": 121034,
+      "lastLinesAdded": 59,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "e9b65672-4bf1-4692-a66b-ac27233faf64"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/db-core-migration": {
+      "allowedTools": [],
+      "history": [
+        "/cost ",
+        "schema.sql の store_logs を追加しようとしています。これは、stores の変更履歴をログデータなので、そのテーブル定義を書いてください。"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "schema.sql",
+        "seed.sql",
+        "master.sql",
+        "create_function.sql"
+      ],
+      "exampleFilesGeneratedAt": 1744604639507,
+      "lastCost": 0.31811864999999995,
+      "lastAPIDuration": 86512,
+      "lastDuration": 929291,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "571d19e3-a3a9-4707-9d7a-5993b893da4f"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api-manage/app/infrastructure/database/store": {
+      "allowedTools": [],
+      "history": [
+        "logQueryArgs を埋めてください\n"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "router.go",
+        "di.go",
+        "game_schedule_tournament_create_usecase.go",
+        "game_tournament.go"
+      ],
+      "exampleFilesGeneratedAt": 1744624255713,
+      "lastCost": 0.1332667,
+      "lastAPIDuration": 13988,
+      "lastDuration": 20144,
+      "lastLinesAdded": 13,
+      "lastLinesRemoved": 3,
+      "lastSessionId": "82c07cd1-e3f7-4816-9534-7eaff29fa578"
+    },
+    "/Users/tetsuhiromanome/.emacs.d": {
+      "allowedTools": [],
+      "history": [
+        "ad-handle-definition: 'gptel-curl--parse-stream' got redefined",
+        "新規作成するファイルはすべて mylisp/ 配下においてください",
+        "⚠️ EMERGENCY FIX: Removing all arguments due to Claude API constraints\nOriginal args (will be removed): nil\n[gptel-anthropic-fix] ⚠️ Fixing tool args for 1 tool calls\n[gptel-anthropic-fix] Processing tool 'LS' (toolu_017fGHZbmAxWACAvzRjDjxWc) with args: nil\n[gptel-anthropic-fix] ⚠️ Function is nil for tool LS, setting fallback\n[gptel-anthropic-fix] Formatting 1 tool results for Claude\n[gptel-anthropic-fix] Formatted tool result for id toolu_017fGHZbmAxWACAvzRjDjxWc: (:type \"tool_result\" :tool_use_id \"toolu_017fGHZbmAxWACAvzRjDjxWc\" :content \"void-function nil\")\nClaude error: ((HTTP/2 400) invalid_request_error) messages.4.content.0.tool_use.args: Extra inputs are not permitted",
+        "Warning (leaf): Error in `gptel' block.  Error msg: Symbol's value as variable is void: mcp-server-connections",
+        "[gptel-anthropic-fix] Formatted tool result for id toolu_019djV9Px1Y3XaF8yG1EZJE1: (:type \"tool_result\" :tool_use_id \"toolu_019djV9Px1Y3XaF8yG1EZJE1\" :content \"void-function nil\")",
+        "Claude error: ((HTTP/2 400) invalid_request_error) messages.2.content.0.tool_use.args: Extra inputs are not permitted",
+        "ad-handle-definition: 'gptel-curl--parse-stream' got redefined",
+        "Claude error: ((HTTP/2 400) invalid_request_error) messages.2.content.0.tool_use.args: Extra inputs are not permitted",
+        "mcp-hub-start-claude-server: Wrong number of arguments: #[nil ((let* ((server (and t (tabulated-list-get-entry))) (name (and server (elt server 0))) (server-arg (and name (cl-find name mcp-hub-servers :key #'car :test #'equal)))) (if server-arg (progn (mcp-hub--start-server server-arg) (mcp-hub-update))))) (t) nil \"Start the currently selected MCP server.",
+        "mcp-hub-start-claude-server: Symbol's function definition is void: mcp-hub-get-server-process",
+        "End of file during parsing: /Users/tetsuhiromanome/.emacs.d/gptel-anthropic-fix.el",
+        "Claude error: ((HTTP/2 400) invalid_request_error) messages.6.content.0.tool_use.args: Extra inputs are not permitted",
+        "ad-handle-definition: 'gptel-curl--parse-stream' got redefined",
+        "gptel で claude code の MCP server と接続しているとき、次のエラーが出ます: Claude error: ((HTTP/2 400) invalid_request_error) messages.6.content.1: unexpected `tool_use_id` found in `tool_result` blocks: toolu_01PzEWrtWeVGzVhyjDr5yMHw. Each `tool_result` block must have a corresponding `tool_use` block in the previous message.",
+        "Claude error: ((HTTP/2 429) rate_limit_error) This request would exceed the rate limit for your organization (2cebc6c9-0533-4e02-9935-0aa5a4af317c) of 20,000 input tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.",
+        "init.el:1193:42: Error: Invalid lambda variable t",
+        "gptel-anthropic-fix.el の eval で elisp-eval-region-or-buffer: Invalid read syntax: \")\", 147, 76 と言われている",
+        "Claude error: ((HTTP/2 400) invalid_request_error) messages.8.content.0.tool_use.args: Extra inputs are not permitted というエラーが出た。これは gptel と claude code の MCP server を繋いでいる状態で起きる。",
+        "gptel-send すると mapcar: Symbol's function definition is void: gptel--ensure-list というエラーが出る",
+        "gptel-mcp-register-tools で次のエラーが出る: Keyword argument :parameters not one of (:function :name :description :args :async :category :confirm :include)",
+        "init.elの括弧のペアが合わなくてエラーになってます",
+        "/cost ",
+        "Claude error: ((HTTP/2 400) invalid_request_error) tools.9.custom.input_schema: JSON schema is invalid. It must match JSON Schema draft 2020-12 (https://json-schema.org/draft/2020-12). Learn more about tool use at https://docs.anthropic.com/en/docs/tool-use.",
+        "逆に、mcp-hub を利用して接続する設定をしてほしいです。mcp-hub の.elファイルは /Users/tetsuhiromanome/repos/mcp.el の中にあります",
+        "gptel から mcp.el を使わずに claude code の MCP Server につなげたい。",
+        "gptel de",
+        "straight/repos/gptel の中身を見て、本当に使える設定になっているか確認してほしい",
+        "init.el の gptel の設定で、gptel-tools を使って claude code の MCP server を使えるようにしたい"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": []
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/api-admin": {
+      "allowedTools": [],
+      "history": [
+        "infrastructure/database 配下で、stores テーブルを作成・更新・削除をしている箇所を探してください"
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "main.go",
+        "router.go",
+        "authorization.go",
+        "store.go",
+        "article.go"
+      ],
+      "exampleFilesGeneratedAt": 1744715799774,
+      "lastCost": 0.22916750000000002,
+      "lastAPIDuration": 31500,
+      "lastDuration": 3612778,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastSessionId": "0e7bd4d7-d8f2-4e6a-bebc-a8c0b7c54f6a"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/dml": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "20250514/01_update_store_plans.sql を作成してください。(他のディレクトリにある直近の同様の名前のファイルを参照してください。)\n項目は、\n店舗表示ID\n店舗名\n店舗のUUID\nユーザーID\n色設定\nです。\n店舗は以下の2店舗です。\n\n1338363\nベルバードポーカー新橋店\n01JTQBE80EC96Y7JFHMQDF8NW1\n01JTQ9BYGT83XJXA1CSCG698R6\ngreen / #268C19 / #FFFFFF\n\n1330660\nNEKOKAJI秋葉原\n01HH44RWP26TDP322J61DYTP2G\n01JV45FRK1M1Y4B662Y0TQ65C7\nblue / #19348C / #FFFFFF",
+          "pastedContents": {}
+        },
+        {
+          "display": "20250507 ディレクトリ配下に、01_update_store_plan.sql を作成してください。(他のディレクトリにある直近の同様の名前のファイルを参照してください。)店舗表示IDは 2747661 で、店名は “W BARREL”、店舗のUUIDは\n  01HH44RWP2D899XZYT1VJ6YWGD です。また、ユーザーIDは 01JSKDRKNQX17ACJ1A2PJGH6JG、色設定は red / #8C1919 / #FFFFFF です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "20250430 ディレクトリ配下に、01_update_store_plan.sql を作成してください。(他のディレクトリにある直近の同様の名前のファイルを参照してください。)店舗表示IDは 4039056 で、店名は \"CASINO Arrows\"、店舗のUUIDは 01JSKG94C7K9FBJTNYM5PQ38H0 です。また、ユーザーIDは 01JSKDRKNQX17ACJ1A2PJGH6JG、色設定は yellow / #2B231D / #FFFFFF です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/dml/20250423/01_update_store_plan.sql において、他の update_store_plan 系と同じようにSQLを組み立ててください",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "03_update_stores_plans.sql",
+        "01_add_store.sql",
+        "01_update_store_plans.sql",
+        "04_add_game_schedule.sql",
+        "02_add_game_tournament.sql"
+      ],
+      "exampleFilesGeneratedAt": 1747195289766,
+      "lastCost": 0.2367806,
+      "lastAPIDuration": 51827,
+      "lastDuration": 418880,
+      "lastLinesAdded": 13,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 1773,
+      "lastTotalOutputTokens": 2188,
+      "lastTotalCacheCreationInputTokens": 32424,
+      "lastTotalCacheReadInputTokens": 272356,
+      "lastSessionId": "fcd64b1f-16ec-4b01-9189-e9299e53cb25"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/pokerroom-ops/terraform/roots/envs/staging": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "roots/envs/staging/website.tf の続きに、website module に関するまだ import を書けていないリソースに対して、module のコードを参照しながら import を記述してください。",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "│ Error: expected length of default_action.0.fixed_response.0.message_body to be in the range (0 - 1024), got <!doctype html>\n│ <html lang=\"ja\">\n│ <head>\n│   <meta charset=\"UTF-8\">\n│   <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0\">\n│   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n│   <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">\n│   <title>ただいまメンテナンス中です</title>\n│ </head>\n│ <body class=\"bg-gray-100\">\n│   <div class=\"flex flex-col justify-center items-center w-screen h-screen px-2\">\n│     <img class=\"h-12\" src=\"https://assets.roots-poker.com/roots-logo.svg\" alt=\"roots-logo\" />\n│     <h1 class=\"text-center text-2xl font-bold mt-4\">ただいまメンテナンス中です</h1>\n│     <dl class=\"text-center text-lg font-bold mt-4\">\n│       <dt>【メンテナンス期間】</dt>\n│       <dd class=\"mt-2 text-red-600\">2025年03月18日 02:00 〜 <br>2025年03月18日 05:00</dd>\n│     </dl>\n│     <p class=\"text-center mt-3\">ご利用の皆様にはご不便をおかけしますが、<br/>メンテナンス終了までしばらくお待ちください。</p>\n│   </div>\n│ </body>\n│ </html>\n│\n│\n│   with module.website.aws_alb_listener.roots_maintenance_https,\n│   on ../../modules/website/load_balancer.tf line 41, in resource \"aws_alb_listener\" \"roots_maintenance_https\":\n│   41:       message_body = var.maintenance_message"
+            }
+          }
+        },
+        {
+          "display": "website module で、[Pasted text #1 +25 lines] というエラーが出るが、どうみても1024文字以内なんですよね",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "│ Error: expected length of default_action.0.fixed_response.0.message_body to be in the range (0 - 1024), got <!doctype html>\n│ <html lang=\"ja\">\n│ <head>\n│   <meta charset=\"UTF-8\">\n│   <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0\">\n│   <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n│   <link href=\"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css\" rel=\"stylesheet\">\n│   <title>ただいまメンテナンス中です</title>\n│ </head>\n│ <body class=\"bg-gray-100\">\n│   <div class=\"flex flex-col justify-center items-center w-screen h-screen px-2\">\n│     <img class=\"h-12\" src=\"https://assets.roots-poker.com/roots-logo.svg\" alt=\"roots-logo\" />\n│     <h1 class=\"text-center text-2xl font-bold mt-4\">ただいまメンテナンス中です</h1>\n│     <dl class=\"text-center text-lg font-bold mt-4\">\n│       <dt>【メンテナンス期間】</dt>\n│       <dd class=\"mt-2 text-red-600\">2025年03月18日 02:00 〜 <br>2025年03月18日 05:00</dd>\n│     </dl>\n│     <p class=\"text-center mt-3\">ご利用の皆様にはご不便をおかけしますが、<br/>メンテナンス終了までしばらくお待ちください。</p>\n│   </div>\n│ </body>\n│ </html>\n│\n│\n│   with module.website.aws_alb_listener.roots_maintenance_https,\n│   on ../../modules/website/load_balancer.tf line 41, in resource \"aws_alb_listener\" \"roots_maintenance_https\":\n│   41:       message_body = var.maintenance_message"
+            }
+          }
+        },
+        {
+          "display": "│ The \"for_each\" set includes values derived from resource attributes that cannot be determined until apply, and so Terraform cannot determine the full set of keys that will identify the instances of this resource.\n│\n│ When working with unknown values in for_each, it's better to use a map value where the keys are defined statically in your configuration and where only the values contain apply-time results.\n│\n│ Alternatively, you could use the -target planning option to first apply only the resources that the for_each value depends on, and then apply a second time to fully converge.",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/envs/staging で terraform apply をしたところ、つぎのエラーが出ました:",
+          "pastedContents": {}
+        },
+        {
+          "display": "network 設定で、1つのルートテーブルにに複数の NAT Gateway を紐づいているのは大丈夫でしょうか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "network 設定で、aws_route_table.main_private に NAT Gateway が各サブネットのぶんだけ紐づいているのはアリかなど、問題がないかを判断してほしいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "/cost ",
+          "pastedContents": {}
+        },
+        {
+          "display": "network 設定で、terraform plan した上で、aws_route_table.main_private に NAT Gateway が各サブネットのぶんだけ紐づいているのはアリかなど、問題がないかを判断してほしいです。",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "exampleFiles": [
+        "roots_cloudfront.tf",
+        "rds.tf",
+        "route53.tf",
+        "roots_elb.tf",
+        "roots_ssm.tf"
+      ],
+      "exampleFilesGeneratedAt": 1746685607132,
+      "lastCost": 0.22801289999999996,
+      "lastAPIDuration": 55768,
+      "lastDuration": 296774,
+      "lastLinesAdded": 37,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 3639,
+      "lastTotalOutputTokens": 1999,
+      "lastTotalCacheCreationInputTokens": 30752,
+      "lastTotalCacheReadInputTokens": 268629,
+      "lastSessionId": "5bf9f316-93b3-45b7-bb54-dc04b4e10487"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/pokerroom-ops/terraform/roots/modules/network": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "aws_route_table.main_privateに aws_nat_gateway.main_public_a, aws_nat_gateway.main_public_c, aws_nat_gateway.main_public_d を紐づけているが、実際には aws_nat_gateway.main_public_d しか紐づかない。これはなぜでしょうか。",
+          "pastedText": null
+        },
+        {
+          "display": "aws_route_table.main_private ni",
+          "pastedText": null
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 2,
+      "exampleFiles": [
+        "roots_cloudfront.tf",
+        "rds.tf",
+        "route53.tf",
+        "roots_elb.tf",
+        "roots_ssm.tf"
+      ],
+      "exampleFilesGeneratedAt": 1746085988994
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/pokerroom-ops": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "modules/api で、ecs task role に対して、SES のメール送信(SendEmail)の権限を与えたいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "pokerroom_id 配下の modules すべての、README.md を作成してください.",
+          "pastedContents": {}
+        },
+        {
+          "display": "claude doctor",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "各modulesの説明をする README.md を作って欲しいです",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes",
+          "pastedContents": {}
+        },
+        {
+          "display": "auth module の aws_cloudwatch_log_data_protection_policy.api_logdataprotection にて、ログのマスキングを行いたいです。ログはjson形式で、その中に req_body という要素があり、その中がさらに json (json string なので \" などはescape される) になっています。そのうち、\"password\":\"aaaaa\", ... のような場所の aaaaa だけをマスキングしたいので、Regex を考えてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "aws_cloudwatch_log_subscription_filter.api_logfilter に必要な aws_iam_role.firehose_api_logfilter を auth module 内に iam.tf を作成したうえで作ってください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "n",
+          "pastedContents": {}
+        },
+        {
+          "display": "module.api.module.auth module de,",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "module.monitoring.module.datadog module で、aws_iam_role.firehose を完成させてほしいです。datadog に対してデータを送信するものです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "/clear ",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "monitoring module で、bastion_task_exec.sh で自動停止まで行いたいです。(ecs task から抜けた後に停止を行いたい)",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module の outputs を完成させてください (雛形だけ書いています)",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "module.api.module.auth で、lifecycle の ignore を all にしたいんだけど、書き方違いますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "これ、ちなみに書き込みってできなくなりますか？別のiam roleからの実行になりますが、GitHub Actions 内で build and push をしていて、ECR への push もできないと困るんですよね",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "うーん、まだこれ言われますね > An error occurred (AccessDeniedException) when calling the CreateFunction operation: Lambda does not have permission to access the ECR image. Check the ECR permissions.",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "module.api.module.auth.aws_iam_role.lambda_execution のロールを指定して aws lambda create-function をしようとしたら、An error occurred (AccessDeniedException) when calling the CreateFunction operation: Lambda does not have permission to access the ECR image. Check the ECR permissions. と言われました。原因を探して修正をしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "iam module の container_deploy_policy で、Lambda権限のところを埋めてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "/config ",
+          "pastedContents": {}
+        },
+        {
+          "display": "修正を実施してください。お願いします。",
+          "pastedContents": {}
+        },
+        {
+          "display": "うーん、しかし、Cluster Instance の作成で Incompatible-create となってしまいました。",
+          "pastedContents": {}
+        },
+        {
+          "display": "この状態で、DB を作成するときに Incompatible-create になることはないですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module で定義されている db parameter と cluster parameter が、それぞれちゃんと Postgresql 17 のパラメーターとして存在しているものなのか、AWSのドキュメントをもとに調べてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "Value: 128 is outside of range: 1024-2147483647 for parameter: maintenance_work_mem",
+          "pastedContents": {}
+        },
+        {
+          "display": "terraform apply をしたところ、DB の作成に失敗しました。June 24, 2025, 21:21 (UTC+09:00)\n    \nCluster topology is updated.\nJune 24, 2025, 21:21 (UTC+09:00)\n    \nDB instance put into incompatible-create state. RDS recommends that you initiate a point-in-time-restore.\nJune 24, 2025, 21:19 (UTC+09:00)\n    \nYou can't create the DB instance because of incompatible resources. Failed to create db instance due to incompatible parameters\nJune 24, 2025, 21:16 (UTC+09:00)\n    \nCluster topology is updated.",
+          "pastedContents": {}
+        },
+        {
+          "display": "terraform apply をしたところ、DB の作成に失敗しました。",
+          "pastedContents": {}
+        },
+        {
+          "display": "Invalid parameter value: stderr,csvlog for: log_destination allowed values are: stderr,csvlog と言われました。",
+          "pastedContents": {}
+        },
+        {
+          "display": "Could not find parameter with name: wal_level と言われました",
+          "pastedContents": {}
+        },
+        {
+          "display": "The parameter track_counts cannot be modified と言われました",
+          "pastedContents": {}
+        },
+        {
+          "display": "Invalid parameter value: %m:%r:%u@%d:[%p]:%l:%e:%s:%v:%x:%c:%q%a for: log_line_prefix allowed values are: %t:%r:%u@%d:[%p]:,%m:%r:%u@%d:[%p]:%l:%e:%s:%v:%x:%c:%q%a です",
+          "pastedContents": {}
+        },
+        {
+          "display": "次は api error InvalidParameterValue: Invalid parameter value: %m [%p] %q%u@%d %h for: log_line_prefix allowed values are: %t:%r:%u@%d:[%p]:,%m:%r:%u@%d:[%p]:%l:%e:%s:%v:%x:%c:%q%a です",
+          "pastedContents": {}
+        },
+        {
+          "display": "api error InvalidParameterValue: Could not find parameter with name: log_checkpoints と言われました",
+          "pastedContents": {}
+        },
+        {
+          "display": "ちなみに、今の状態で Aurora の Blue-Green Deploy を利用できる状態になっていますか？ 何かしらの parameter が必要だった気がしていまして。",
+          "pastedContents": {}
+        },
+        {
+          "display": "まだ cannot use immediate apply method for static parameter と言われてますね",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module の cluster parameter group にて、cannot use immediate apply method for static parameter と言われているものがあるので、AWS のドキュメントを調べたうえで pending-reboot が必要なものは apply_method を追加してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "cannot use immediate apply method for static parameter to",
+          "pastedContents": {}
+        },
+        {
+          "display": "これはどの用に修正すればよいでしょうか？  4. CloudWatch Logsエクスポート\n    - MySQLのログタイプ（audit, slowquery）を指定\n    - 推奨: PostgreSQL用のログタイプに修正",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module で、parameter の一部を計算して求めているのですが、適切かどうか判断してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module でまだエラーが出ます。AWS のドキュメントを調べつつ、渡すパラメーターを修正してください。[Pasted text #1 +23 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "╷\n│ Error: modifying RDS Cluster Parameter Group (prid-stg-auth-db): operation error RDS: ModifyDBClusterParameterGroup, https response error StatusCode: 400, RequestID: 12306a21-74a4-4db3-a5ac-68cc28f13536, api error InvalidParameterCombination: cannot use immediate apply method for static parameter\n│\n│   with module.rdb.aws_rds_cluster_parameter_group.main_db_cluster_parameter_group,\n│   on ../../modules/rdb/rds.tf line 1, in resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\":\n│    1: resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\" {\n│\n╵\n╷\n│ Error: modifying RDS DB Parameter Group (prid-stg-aurora-postgresql-17): operation error RDS: ModifyDBParameterGroup, https response error StatusCode: 400, RequestID: da380c2c-a556-4cef-9e53-b17fb83dbcac, api error InvalidParameterValue: Could not find parameter with name: bgwriter_delay\n│\n│   with module.rdb.aws_db_parameter_group.main_db_parameter_group,\n│   on ../../modules/rdb/rds.tf line 129, in resource \"aws_db_parameter_group\" \"main_db_parameter_group\":\n│  129: resource \"aws_db_parameter_group\" \"main_db_parameter_group\" {\n│\n╵\n╷\n│ Error: creating RDS DB Proxy (prid-stg-main-db-proxy): operation error RDS: CreateDBProxy, https response error StatusCode: 400, RequestID: 2d482aea-8e06-4256-a588-cb6935c99708, api error InvalidParameterValue: RDS is not authorized to assume service-linked role arn:aws:iam::359104569736:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS (Service: Sts, Status Code: 403, Request ID: 9c6716d9-735b-4a0a-86f1-3a342bac5da0) (SDK Attempt Count: 1). Check your RDS service-linked role and try again.\n│\n│   with module.rdb.aws_db_proxy.main_db_proxy,\n│   on ../../modules/rdb/rds.tf line 333, in resource \"aws_db_proxy\" \"main_db_proxy\":\n│  333: resource \"aws_db_proxy\" \"main_db_proxy\" {\n│\n╵"
+            }
+          }
+        },
+        {
+          "display": "api module など、ほかのモジュールも見てもいいので、先程の他のエラーも確認してください",
+          "pastedContents": {}
+        },
+        {
+          "display": "次は以下のようなエラーが出ました: [Pasted text #1 +30 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "╷\n│ Error: modifying RDS Cluster Parameter Group (prid-stg-auth-db): operation error RDS: ModifyDBClusterParameterGroup, https response error StatusCode: 400, RequestID: a4b0122a-37a5-44e8-98b1-7f54cbd7ac39, api error InvalidParameterValue: value does not match pattern\n│\n│   with module.rdb.aws_rds_cluster_parameter_group.main_db_cluster_parameter_group,\n│   on ../../modules/rdb/rds.tf line 1, in resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\":\n│    1: resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\" {\n│\n╵\n╷\n│ Error: modifying RDS DB Parameter Group (prid-stg-aurora-postgresql-17): operation error RDS: ModifyDBParameterGroup, https response error StatusCode: 400, RequestID: 7bdb6b1e-6a9f-4d94-85ed-46952a89b1d2, api error InvalidParameterValue: The parameter effective_io_concurrency cannot be modified.\n│\n│   with module.rdb.aws_db_parameter_group.main_db_parameter_group,\n│   on ../../modules/rdb/rds.tf line 126, in resource \"aws_db_parameter_group\" \"main_db_parameter_group\":\n│  126: resource \"aws_db_parameter_group\" \"main_db_parameter_group\" {\n│\n╵\n╷\n│ Error: creating RDS DB Proxy (prid-stg-main-db-proxy): operation error RDS: CreateDBProxy, https response error StatusCode: 400, RequestID: 1073a579-6933-430a-8d81-911c89162959, api error InvalidParameterValue: RDS is not authorized to assume service-linked role arn:aws:iam::359104569736:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS (Service: Sts, Status Code: 403, Request ID: a9c13cdd-cd92-4838-b3ab-1f910761fd3e) (SDK Attempt Count: 1). Check your RDS service-linked role and try again.\n│\n│   with module.rdb.aws_db_proxy.main_db_proxy,\n│   on ../../modules/rdb/rds.tf line 329, in resource \"aws_db_proxy\" \"main_db_proxy\":\n│  329: resource \"aws_db_proxy\" \"main_db_proxy\" {\n│\n╵\n╷\n│ Error: modifying ELBv2 Load Balancer (arn:aws:elasticloadbalancing:ap-northeast-1:359104569736:loadbalancer/app/prid-stg-account-api/7e69fbf4f26ad0f2) attributes: operation error Elastic Load Balancing v2: ModifyLoadBalancerAttributes, https response error StatusCode: 400, RequestID: 10e003e8-cff3-4f9f-97cf-d67b63e9b47d, InvalidConfigurationRequest: Access Denied for bucket: prid-elastic-load-balancer-staging-logs. Please check S3bucket permission\n│\n│   with module.api.module.auth.aws_lb.account_api_load_balancer,\n│   on ../../modules/api/auth/load_balancer.tf line 1, in resource \"aws_lb\" \"account_api_load_balancer\":\n│    1: resource \"aws_lb\" \"account_api_load_balancer\" {\n│"
+            }
+          }
+        },
+        {
+          "display": "rdb module で、terraform apply をしたら以下のエラーが出ました。なんのパラメーターがだめなのかを探し、修正してください。 [Pasted text #1 +15 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "╷\n│ Error: modifying RDS Cluster Parameter Group (prid-stg-auth-db): operation error RDS: ModifyDBClusterParameterGroup, https response error StatusCode: 400, RequestID: d6fd0b13-f996-415c-8d6d-7e094f5cf7f1, api error InvalidParameterValue: value does not match pattern\n│\n│   with module.rdb.aws_rds_cluster_parameter_group.main_db_cluster_parameter_group,\n│   on ../../modules/rdb/rds.tf line 1, in resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\":\n│    1: resource \"aws_rds_cluster_parameter_group\" \"main_db_cluster_parameter_group\" {\n│\n╵\n╷\n│ Error: modifying RDS DB Parameter Group (prid-stg-aurora-postgresql-17): operation error RDS: ModifyDBParameterGroup, https response error StatusCode: 400, RequestID: 7522a29e-6a77-45c2-ab96-97fcf5e0c7df, api error InvalidParameterValue: Could not find parameter with name: lock_timeout\n│\n│   with module.rdb.aws_db_parameter_group.main_db_parameter_group,\n│   on ../../modules/rdb/rds.tf line 126, in resource \"aws_db_parameter_group\" \"main_db_parameter_group\":\n│  126: resource \"aws_db_parameter_group\" \"main_db_parameter_group\" {\n│\n╵"
+            }
+          }
+        },
+        {
+          "display": "今 envs/local に書いているものを、envs/staging にも移植してください。account_id は 359104569736、environment_short は stg、environment は staging です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "envs/local/api.tf を完成させてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "現在、各モジュールやenvsの中でterraformの AWS Provider のバージョンを6.0.0以上に指定していますが、これをすべて 6.0.0 固定にしてください。なお、パッチバージョンは見なくていいので、~> 6.0.0 という表記になると思います",
+          "pastedContents": {}
+        },
+        {
+          "display": "現在、各モジュールやenvsの中でterraformの AWS Provider のバージョンを6.0.0以上に指定していますが、これをすべて 6.0.0 固定にしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "毎回 secrets manager の値が変更されないように修正してください",
+          "pastedContents": {}
+        },
+        {
+          "display": "rdb module について質問です。今、パスワードを自動生成するようにしているのですが、一度リソースを作った後に再度 terraform apply をしたら、パスワードの値が変更されて保存されてしまいますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "cert.tf で、app_domain_zone_id と api_domain_zone_id を data で定義していますが、module.dns の output から取ってくるようにしてください",
+          "pastedContents": {}
+        },
+        {
+          "display": "envs/local/ の、dns.tf と cert.tf を完成させてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "cluster parameter と db parameter が、db.r8g.large でも db.t4g.medium でも適正な値に設定されているか、客観的に再度確認してみてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "max_parallel_workers_per_gather などの設定を、渡されている var.main_db_instance_size に応じて自動で計算することって出来ますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "現在、aws_db_parameter_group.main_db_parameter_group にはなんのパラメータも書いていません。クラスタパラメータに倣っておすすめの設定を書いてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "envs/local/rdb.tf の rdb module のパラメータを埋めてください。値は適当でいいですが、ローカル環境用なので、台数は1~2台で問題ないです",
+          "pastedContents": {}
+        },
+        {
+          "display": "/upgrade ",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/envs/staging/website.tf の続きに、website module を参照してすべてのリソースに対する import 文を書いてください。IDは仮置きで大丈夫です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "to で指定した resource 名がmoduleで定義されているものとあっているかチェックしてください。合ってない気がします。",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/envs/staging/api.tf の続きに、api.tf の関連モジュールで定義されているリソースの import を書いてください。id は仮置きで大丈夫です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/envs/staging/api.tf で、定義されているリソースの import を書いてください。id は仮置きで大丈夫です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/staging/api.tf を作成してください。中身は、roots/modules/api の内容です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/staging/api.tf を作成してください。中身は、modules/api の内容です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "importの話ではなく、data.aws_ec2_managed_prefix_list.cloudfront を定義したときに、それを他のresourceから参照する方法を知りたいです",
+          "pastedContents": {}
+        },
+        {
+          "display": "data \"aws_ec2_managed_prefix_list\" \"cloudfront\" {\n  name = \"com.amazonaws.global.cloudfront.origin-facing\"\n}",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、次の定義があった場合、参照はどうすればいい?",
+          "pastedContents": {}
+        },
+        {
+          "display": "aws_ec2_managed_prefix_list の id って、aws_ec2_managed_prefix_list.hoge.id でいい？",
+          "pastedContents": {}
+        },
+        {
+          "display": "roots/envs/staging/kvs.tf で、すべてのリソースについて import を書いてください。idは一旦仮置きで大丈夫です。",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {
+        "awslabs.core-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.core-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "awslabs.aws-documentation-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.aws-documentation-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "awslabs.cost-analysis-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.cost-analysis-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR",
+            "AWS_PROFILE": "waitinglist"
+          }
+        },
+        "awslabs.terraform-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.terraform-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      },
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "exampleFiles": [
+        "roots_cloudfront.tf",
+        "rds.tf",
+        "route53.tf",
+        "roots_elb.tf",
+        "roots_ssm.tf"
+      ],
+      "exampleFilesGeneratedAt": 1752576689145,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 1.6115055500000002,
+      "lastAPIDuration": 176299,
+      "lastDuration": 88398381,
+      "lastLinesAdded": 23,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 1733,
+      "lastTotalOutputTokens": 3356,
+      "lastTotalCacheCreationInputTokens": 53363,
+      "lastTotalCacheReadInputTokens": 461943,
+      "lastSessionId": "e0d1f77d-8702-48c8-b2f8-c3931ce6132d"
+    },
+    "/Users/tetsuhiromanome/Documents/pokerroom/taichi": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "for (... of ...) の記法に対応していないプラットフォームのようなので、同値になるように基本記法や forEach で書き換えてください",
+          "pastedText": null
+        },
+        {
+          "display": "63行目のanimationStylesで、maskText以降のものをtypesで指定している形式に書き換えてください。必要のない要素は書かなくてよいです。",
+          "pastedText": null
+        },
+        {
+          "display": "/cost ",
+          "pastedText": null
+        },
+        {
+          "display": "test03_16.jsx にて、キーフレームを設定している484行目以降で、position や opacity の書き方に合わせて scale, rotationX, rotationY も書き換えてください",
+          "pastedText": null
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "enableAllProjectMcpServers": false,
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 1,
+      "lastCost": 1.1997776000000002,
+      "lastAPIDuration": 194508,
+      "lastDuration": 55761559,
+      "lastLinesAdded": 233,
+      "lastLinesRemoved": 77,
+      "lastSessionId": "9c7ebbd2-228a-47c3-9339-fd81185545bf"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/pokerroom-account-api": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "/mcp ",
+          "pastedContents": {}
+        },
+        {
+          "display": "続きをお願いします",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "そうだ、Discovery document に prid の記載をしていませんでした。scopes_supported が変わったなど、色々変更があるので、コードを読んで内容の更新をしてください！",
+          "pastedContents": {}
+        },
+        {
+          "display": "ありがとうございます！なるほど、理解しました。\nでは、一応オプショナルなものとして実装は残しましょう！",
+          "pastedContents": {}
+        },
+        {
+          "display": "全サービス間でセッションの同期をする必要はあるのでしょうか？\n例えば POKER ROOM ID の公式サイトがあったとして、そこでログアウトしたとします。Aサービスは POKER ROOM ID を連携していますが、個別のセッションを持っているため POKER ROOM ID 公式サイトでログアウトしてもセッションは維持され続けると思うのです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "例えば Aサービスでこのaccount-apiのOIDC機能を使って \"POKER ROOM IDでログイン\" というボタンを作ったとします。\nこのとき、そのボタンを押すとログイン画面が別ウインドウで表示され、そこでログインが完了するとそのウインドウは閉じて、Aサービスにid tokenが渡されて、userinfo を叩くことによって初期データを作ることが出来る、もしくはそれでログインできるようになるという仕組みになると認識しています。\nこの中で、Session Management はどういう立ち位置になるのですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "今回、OIDC のログイン時に別タブや別ウインドウで表示されるログイン画面などのフロントエンドは別のリポジトリで React.js などを用いて作ろうと思っていますが、この Session Management とはまた別の話になりますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "y. ただし、すべてのトークンを無効化するのではなく、そのセッションのトークンだけ無効したほうがいいかもです (他のサービスで別のトークンを使っている可能性があるため)",
+          "pastedContents": {}
+        },
+        {
+          "display": "Session Management はどのように実装するのですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "Hybrid Flow の実装をしましょう！",
+          "pastedContents": {}
+        },
+        {
+          "display": "OIDC 準拠対応のリストで、マダ出来ていないのはありますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "今、app/presentation/middleware/authorization.go を変えようとしています。現状 access token しか受け入れられなくなっていますが、id token も受け入れられるようにしたいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ID Token に Scope が含まれていないため、エラーになってしまします。ID Token にも Scope の実装をしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "n. Token Introspection/Revocation は一旦後回しにしましょう。一応、/v1/user/token や /v1/auth/signout で同じことが達成できていそうです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "1から順番に進めていきましょう！",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、次の対応を進めましょう",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では次に、これらを対応していきたいです。\n  OpenID Connect Core 1.0 の準拠していない箇所：\n\n  1. Discovery ドキュメント（/.well-known/openid-configuration）の不足フィールド\n    - 必須: scopes_supported, claims_supported, grant_types_supported, token_endpoint_auth_methods_supported\n    - 推奨: userinfo_endpoint, registration_endpoint, service_documentationなど多数\n  2. UserInfo エンドポイントの欠如\n    - OIDC必須のUserInfoエンドポイントが実装されていない\n  3. ID Tokenの検証\n    - nonceの検証が実装されているが、at_hashやc_hashの実装が見当たらない\n  4. Hybrid Flow未対応\n    - response_types_supportedにcodeのみで、code id_tokenやcode tokenなどのHybrid Flowがサポートされていない\n  5. Token Introspection/Revocation\n    - トークンの無効化・検証エンドポイントが未実装\n  6. セッション管理\n    - OIDCのセッション管理仕様（check_session_iframe, end_session_endpointなど）が未実装",
+          "pastedContents": {}
+        },
+        {
+          "display": "auth_api-1  | # github.com/pokerroom/pokerroom-account-api/app/presentation/handler\nauth_api-1  | app/presentation/handler/oauth.go:5:2: \"encoding/base64\" imported and not used",
+          "pastedContents": {}
+        },
+        {
+          "display": "ビルドエラー起きてるっぽいです\n# github.com/pokerroom/pokerroom-account-api/app/usecase/oauth\nauth_api-1  | app/usecase/oauth/error.go:20:31: field and method with the same name Error\nauth_api-1  |   app/usecase/oauth/error.go:5:2: other declaration of Error\nauth_api-1  | app/usecase/oauth/error.go:24:9: cannot use e.Error (value of type func() string) as string value in return statement",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では次に、\n3. Content-Type\n    - トークンエンドポイントはapplication/x-www-form-urlencodedを受け付けるべきだが、JSONのみ対応\nこれを対応してほしいです。おそらく、json:\"hogehoge\" のようにタグを指定しているところに form:\"hogehoge\" を追加するだけな気もしています",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "今の状態だと、authorization_code フローの token エンドポイントでは パブリックなクライアントタイプで利用できないように見えますが、利用できるようにしなくてよいのでしょうか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "n. authorization.go が既にいるはずですが",
+          "pastedContents": {}
+        },
+        {
+          "display": "Authorization Header のデコードなどは app/presentation/middleware でハンドリングしたほうがいいかもです",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ではまず、OAuth2.0 について、\"トークンエンドポイントでclient_secretによるクライアント認証が実装されていない\" を解消してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "このプロジェクトは、Go の echo framework を使った、認証認可のAPIです。認証の機能は Cognito を利用していますが、認可の機能は自前で実装しています。\nOAuth2.0 / OIDC 準拠で作っており、v1/oauth/token と v1/oauth/authorize が OAuth 用のエンドポイントです。\nこのうち、OAuth2.0 / OIDC として準拠しているかどうかを細かくチェックし、準拠していない箇所を洗い出してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "認証コードは総当たりに弱いので、試行回数をカウントし、上限を設けたいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "email_template_variables は使わなさそうなので削除しました。\nemail template の repository を定義し、先程作った認証コードの送信の delegate process で、email template repository を delegate process に DI し、取得してから SES で送信するようにしたいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "メールの文面が複数考えられるため、DB にテンプレートを保存しようと考えています。db-migration/migration/schema.sql に、メールテンプレートのDBスキーマを書いてください。Postgresql 17.5 です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "EmailService として実装してもらったやつを、EmailDelegateProcess として infrastructure/delegateprocess 配下にしてください",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "私は認証認可のAPIを作成しています。認証のバックエンドとしてCognitoを利用し、認可部分(アクセストークンの発行・検証など)は自前実装をしています。\nしかし、認証部分としてメールアドレス変更をしたいのですが、Cognito の UpdateUserAttribute や VerifyUserAttribute には Cognito の aws.cognito.signin.user.adminスコープがついたアクセストークンが必要になります。\nそのため、認証コードの入力を自前で持つようにし、Confirm Change Email のエンドポイントのときに UpdateUserAttribute のかわりに AdminUpdateUserAttribute (email_verified を true にする) を叩いて強制的に変えるようにする、というアプローチにしたいです。\nなので、このメール認証コードの仕組みを実装してください。\n要件は以下のとおりです。\n- ChangeEmailRequest usecase では認証コードを発行し、リクエストされたメールアドレスにメールを送ります\n  - このとき、Cognito 側への操作はしません\n  - メールは AWS SES を利用して送信します\n  - コードは redis (valkey) に保存します\n- ConfirmChangeEmail usecase では、渡された認証コードを検証し、問題なければメールを更新します\n  - Cognito を変更する必要があるので、usecase から ForceUpdateEmail (delegateprocess) を呼び出します",
+          "pastedContents": {}
+        },
+        {
+          "display": "/mcp ",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、指摘箇所のうち、1.3 error_uriパラメータが未実装 と 1.4 Scopeパラメータの完全実装不足 と 1.5 Stateパラメータの検証不足 をまず対応してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "deha",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "このプロジェクトは、Go の echo framework を使った、認証認可のAPIです。認証の機能は Cognito を利用していますが、認可の機能は自前で実装しています。\nOAuth2.0 / OIDC 準拠で作っており、v1/oauth/token と v1/oauth/authorize が OAuth 用のエンドポイントです。\nこのうち、OAuth2.0 / OIDC として準拠しているかどうかを細かくチェックし、準拠していない箇所を洗い出してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "SignIn, ConfirmResettingPassword, ChangePassword, ChangeEmailRequest, ConfirmChangeEmail に関しても対応してほしいです！直接編集できなかったのはなぜですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "auth.go に関して、まだ4xx系のエラーの記述がないメソッドが多くありそうです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes",
+          "pastedContents": {}
+        },
+        {
+          "display": "app/presentation/handler 配下のファイルの oauth.go の Token のように、返されうるエラーの種別をgodocのdescriptionに記述したいです。ほかのメソッドも同様に4xx系エラーの種別をgodocに書いてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "test 実行したら出ました\n# github.com/pokerroom/pokerroom-account-api/app/domain/token/service [github.com/pokerroom/pokerroom-account-api/app/domain/token/service.test]\napp/domain/token/service/token_service_test.go:10:2: \"github.com/pokerroom/pokerroom-account-api/app/domain/token/entity\" imported and not used",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ありがとうございます。\n次に、app/domain/token/entity/ 配下のファイルと app/domain/token/service/ 配下のファイルについて、テストコードを書いてほしいです。\nもし環境変数が与えられている場合、テストコードの実行前に環境変数に適当な値をセットするようにしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "go vet ./app/.. したらエラーが出ていたので、直してください。\n# github.com/pokerroom/pokerroom-account-api/app/infrastructure/database/authlog\napp/infrastructure/database/authlog/user_auth_action.go:39:16: cannot use m.AuthEventID (variable of type string) as vo.AuthEventID value in struct literal\napp/infrastructure/database/authlog/user_auth_action.go:54:16: cannot use e.AuthEventID (variable of string type vo.AuthEventID) as string value in struct literal",
+          "pastedContents": {}
+        },
+        {
+          "display": "y. ついでに、auth_event_id の テストコードも書いておいてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "定義してもらった UserAuthAction の AuthEventID というプロパティについて、domain/authlog/entity/vo/ 配下に AuthEventID という value object を作成し、その型にしてほしいです。value object の書き方は、app/domain/user/entity/vo/ 配下のファイルが参考になると思います。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "古いorigin_token_idは削除して良さそうに感じましたが、削除しない理由はありますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "n. 新しい origin_token_id を生成するのはなぜですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "app/usecase/auth/change_password_usecase.go で、TODO コメントに書いているようにパスワード変更をしたら、そのユーザーが持つすべてのトークンを無効にしたいので、処理を書いてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ユーザーのsignup, signin のログを取るために DB に user_auth_actions を作成しました。(db-migration/migration/schema.sql, マスタデータは db-migration/migration/master.sql)\n  実際に signup, signin した際のログを挿入する処理を作成してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "一旦今の変更戻してください",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ユーザーのsignup, signin のログを取るために DB に user_auth_actions を作成しました。(db-migration/migration/schema.sql)\n実際に signup, signin した際のログを挿入する処理を作成してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "ユーザーのsignup, signin のログを取るために DB ni",
+          "pastedContents": {}
+        },
+        {
+          "display": "app/presentation/middleware/authorization.go で、token の有効期限が切れているとき、RequireAuthorize ではエラーになり、OptionalAuthorize ではエラーにならないようになっているかをチェックしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、DB設計の変更から始めましょう。registered_redirect_uris や allowed_scopes は複数登録できるものだと思いますが、カラムとして実装しますか？それとも別テーブルに切り出してリレーショナルにしますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "authorize_usecase.go で、TODO コメントが書いてありますが、具体的に何をすればよいですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "token_usecase.go で、refreshToken の処理だけ書かれていますが、この処理も authorization_code のときと同様、別のファイルに分けてほしいです。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "authorization_code を DB で実装していただいていますが、せいぜい10分程度のコードで ttl を設けたいので、redis に置いたほうがいいのかなと思いましたが、どう思いますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、/authorize エンドポイントの実装もお願いします。token_usecase.go と同じ階層に、authorize_usecase.go として実装してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "このプロジェクトで、app/usecase/oauth/token_usecase.go は OAuth2.0 の token エンドポイントの実装です。現在は refresh_token しか実装されていないのですが、\"authorization_code\", \"password\", \"client_credentials\" あたりも実装をしたいと考えています。(OIDC の実装を見据えているためです。)まずは、authorization_code の実装をしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "/mcp ",
+          "pastedContents": {}
+        },
+        {
+          "display": "/exit ",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "redis で書いている処理を、valkey に置き換えることは出来ますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "すみません、delegate_process も repository と同様、service からではなく usecase から呼ぶようにしてください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "では、secrets manager による実装を考えてください。app/infrastructure/aws/ に新しく secretsmanager.go を追加し、クライアントを作成し、delegate process で操作できるようにします。\nもし鍵がない場合は新しく生成し、保存するようにしてください。\nキーの名前はなんでもいいです。\n鍵は RSA 4096 で生成してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {
+        "awslabs.aws-documentation-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.aws-documentation-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "aws-knowledge-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "mcp-proxy",
+            "--transport",
+            "streamablehttp",
+            "https://knowledge-mcp.global.api.aws"
+          ],
+          "env": {
+            "AWS_PROFILE": "default",
+            "AWS_REGION": "us-east-1",
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "awslabs.aws-pricing-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.aws-pricing-mcp-server@latest"
+          ],
+          "env": {
+            "AWS_PROFILE": "default",
+            "AWS_REGION": "ap-northeast-1",
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        },
+        "awslabs.terraform-mcp-server": {
+          "command": "/Users/tetsuhiromanome/.local/bin/uvx",
+          "args": [
+            "awslabs.terraform-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      },
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "auth.go",
+        "router.go",
+        "authorization.go",
+        "auth_usecase_interface.go",
+        "signup_usecase.go"
+      ],
+      "exampleFilesGeneratedAt": 1752556972047,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0.0221352,
+      "lastAPIDuration": 7503,
+      "lastDuration": 27648,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 27289,
+      "lastTotalOutputTokens": 76,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "450dbf01-48ca-4624-9f67-9c3b60c53f78"
+    },
+    "/Users/tetsuhiromanome": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "/init ",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": true,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/tetsuhiromanome/.claude": {
+      "allowedTools": [],
+      "history": [],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 3,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 1175,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "a3d0e319-abb8-4c0d-ae91-6f4d2f2cc156"
+    },
+    "/Users/tetsuhiromanome/.claude/local": {
+      "allowedTools": [],
+      "history": [],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/": {
+      "allowedTools": [],
+      "history": [],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/pokerroom/pokerroom-account-api/build/terraform": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "localstack に対して terraform plan しようとすると、えらーになります > ╷\n│ Error: creating AWS SESv2 (Simple Email V2) Email Identity (noreply@pokerroom.jp): operation error SESv2: CreateEmailIdentity, https response error StatusCode: 403, RequestID: 387830cb-39f3-4107-9b7a-6d65b513f377, api error UnrecognizedClientException: The security token included in the request is invalid.\n│\n│   with aws_sesv2_email_identity.main,\n│   on ses.tf line 1, in resource \"aws_sesv2_email_identity\" \"main\":\n│    1: resource \"aws_sesv2_email_identity\" \"main\" {\n│\n╵",
+          "pastedContents": {}
+        },
+        {
+          "display": "terraform plan はうまくいくのですが、terraform apply をすると次のエラーが発生します。 ╷\n│ Error: creating AWS SESv2 (Simple Email V2) Email Identity (noreply@pokerroom.jp): operation error SESv2: CreateEmailIdentity, https response error StatusCode: 403, RequestID: 2e22f953-0bf7-4e8c-b5d9-9d1c0419607c, api error UnrecognizedClientException: The security token included in the request is invalid.\n│\n│   with aws_sesv2_email_identity.main,\n│   on ses.tf line 1, in resource \"aws_sesv2_email_identity\" \"main\":\n│    1: resource \"aws_sesv2_email_identity\" \"main\" {\n│\n╵",
+          "pastedContents": {}
+        }
+      ],
+      "dontCrawlDirectory": false,
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 3,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "validator.go",
+        "function_and_trigger.sql",
+        "id.go",
+        "Dockerfile.dev",
+        "README.md"
+      ],
+      "exampleFilesGeneratedAt": 1749635356951,
+      "lastCost": 0.4601324,
+      "lastAPIDuration": 53119,
+      "lastDuration": 82066,
+      "lastLinesAdded": 6,
+      "lastLinesRemoved": 4,
+      "lastTotalInputTokens": 3960,
+      "lastTotalOutputTokens": 995,
+      "lastTotalCacheCreationInputTokens": 16148,
+      "lastTotalCacheReadInputTokens": 60692,
+      "lastSessionId": "a7ecb7a7-9176-4a48-afb3-331aa62ad334"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/manomekun/sysdesign/pokerroom/account": {
+      "allowedTools": [],
+      "history": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/manomekun/sysdesign": {
+      "allowedTools": [],
+      "history": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 0.00012880000000000001,
+      "lastAPIDuration": 914,
+      "lastDuration": 232506,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 121,
+      "lastTotalOutputTokens": 8,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "76890d9f-f0d1-4634-bbdf-f7c52247a163"
+    },
+    "/Users/tetsuhiromanome/ghq/github.com/waitinglisthq/tf-cloud-manager": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "また、aws_cur_report_definition.aws_cur_report にて、InvalidParameter と言われたのですが、原因わかりますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "aws_s3_bucket_policy.cur_report_bucket_policy で、putting S3 Bucket (cur-bucket-933547265221) Policy: operation error S3: PutBucketPolicy, https response error StatusCode: 400, RequestID: BRYZ62Q3G1XAGG5K, HostID: 9dOVFzIkFI86VdPuPMukcpeLukVCwMt+482cyY11Durrr4ZQoVNQaErAWguXK8GOfRNTh5fWY3w=, api error MalformedPolicy: Missing required field Effect と言われたので直してほしいです",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "main.tf",
+        "route_53.tf",
+        "iam.tf",
+        "securitygroup.tf",
+        "rds.tf"
+      ],
+      "exampleFilesGeneratedAt": 1751256879524,
+      "lastCost": 2.1607028499999994,
+      "lastAPIDuration": 191934,
+      "lastDuration": 897909,
+      "lastLinesAdded": 44,
+      "lastLinesRemoved": 49,
+      "lastTotalInputTokens": 3008,
+      "lastTotalOutputTokens": 7098,
+      "lastTotalCacheCreationInputTokens": 37649,
+      "lastTotalCacheReadInputTokens": 622099,
+      "lastSessionId": "d8359ed8-8f11-41fe-a9d8-f42824009187"
+    },
+    "/Users/tetsuhiromanome/sandbox/go/cognitoimport": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "Alacritty + zellij なんですけど、この場合どうしたらいいんでしょうか",
+          "pastedContents": {}
+        },
+        {
+          "display": "/terminal-setup",
+          "pastedContents": {}
+        },
+        {
+          "display": "claude code ってどうやったら改行できます？",
+          "pastedContents": {}
+        },
+        {
+          "display": "aaa",
+          "pastedContents": {}
+        },
+        {
+          "display": "/terminal-setup",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "今の records.csv をもとに、Cognito に import する CSV を作りたいです。CSV のヘッダーは、aws get-csv-header により次の要素があることが分かっています。 {\n    \"UserPoolId\": \"ap-northeast-1_ayeILVOHX\",\n    \"CSVHeader\": [\n        \"profile\",\n        \"address\",\n        \"birthdate\",\n        \"gender\",\n        \"preferred_username\",\n        \"updated_at\",\n        \"website\",\n        \"picture\",\n        \"phone_number\",\n        \"phone_number_verified\",\n        \"zoneinfo\",\n        \"custom:role\",\n        \"locale\",\n        \"email\",\n        \"email_verified\",\n        \"given_name\",\n        \"family_name\",\n        \"middle_name\",\n        \"name\",\n        \"nickname\",\n        \"cognito:mfa_enabled\",\n        \"cognito:username\"\n    ]\n}  なお、custom:role は user, cognito:username は email と同じ、cognito:mfa_enabled は false、email_verified は true です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "ついでに、次のリストをrecords.csvにしてくれませんか？ [Pasted text #1 +9 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "PRID: 97738364, uid: eZJsK9m47ZSfB0hL3bFLGbuW6aH3, email: pokerroom.dev+12@example.com\nPRID: 58297651, uid: FTfCzvlA1OgkHzTxQbAh0muV84k1, email: pokerroom.dev+9@example.com\nPRID: 42915244, uid: 9FigodcafdRPUwVmgvtMdlF2KOp1, email: pokerroom.dev+8@example.com\nPRID: 02290187, uid: UMJGDX1i4fOX8Fy3kMNfV1DZFU43, email: syunto.kakii+20250621011800@pokerroom.co.jp\nPRID: 87082781, uid: ACBVqG1wd9O66ESIYeYrLAojVIr2, email: syunto.kakii+202506210050@pokerroom.co.jp\nPRID: 25984913, uid: vhUvDJMUS9OVaSoEO13ZbV0GRE22, email: daisuke.sawayama@pokerroom.co.jp\nPRID: 37945343, uid: CaVTRKKw2wak8dxHPYlPKTKz7jq1, email: dsawayama@gmail.com\nPRID: 96331546, uid: YKs9w9km4IXNZ3eJHI09jt2RsKu1, email: sawadii117@gmail.com\nPRID: 13051430, uid: LKMQO1fKQderkMXAMKcGFOimTPS2, email: dsawayama@yahoo.co.jp\nPRID: 22944389, uid: oqWakrhsb1c73JlMgKYEzrBwkmb2, email: sawadii117@yahoo.co.jp"
+            }
+          }
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "n. status_id は unconfirmed にしてください",
+          "pastedContents": {}
+        },
+        {
+          "display": "n. poker_room_id は、別のCSV (records.csv) の pokerroom_id を参照してください。参照するための情報は email です。",
+          "pastedContents": {}
+        },
+        {
+          "display": "n",
+          "pastedContents": {}
+        },
+        {
+          "display": "main.go は cognito user list を取ってくる処理までを書いています。このあと、Postgresql の INSERT 文を作る必要があります。INSERT 文は次のようなものになります: INSERT INTO users (id, cognito_user_id, poker_room_id, email, gender_id, status_id) VALUES\n(\n  uuid_v7(),\n  'c7a47a98-90b1-709e-bd55-d1854fc41530',\n  '22757044',\n  'dev@pokerroom.co.jp',\n  'other',\n  'confirmed'\n);",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "CognitoCSV を完成させてください (あとで CSV ふぁいるにエクスポートします)",
+          "pastedContents": {}
+        },
+        {
+          "display": "CognitoCSV wo",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 2.3713180499999997,
+      "lastAPIDuration": 408470,
+      "lastDuration": 2009924,
+      "lastLinesAdded": 71,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 23486,
+      "lastTotalOutputTokens": 9273,
+      "lastTotalCacheCreationInputTokens": 37943,
+      "lastTotalCacheReadInputTokens": 671122,
+      "lastSessionId": "8a01ea0c-96b5-4d8c-93ae-0c84b92efbab"
+    },
+    "/Users/tetsuhiromanome/repos/pokerroom/pokerroom-account-api": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "ありがとうございました。",
+          "pastedContents": {}
+        },
+        {
+          "display": "user_test.go の IsDisabled を修正したので、テストを修正してください,",
+          "pastedContents": {}
+        },
+        {
+          "display": "再度変えました。既存の処理に手を加えるのを止めて、IsRequiredResetPassword() というのを新規作成したので、テストを修正してください。",
+          "pastedContents": {}
+        },
+        {
+          "display": "user_test.go の TestUser_IsActive には特に変更が加えられてなさそうですが、変更しなくても大丈夫ですか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "app/domain/entity/vo/user_status.go と app/domain/entity/user.go を変更したので、対応するテストコードも修正してください。",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "app/presentation/handler/auth.go",
+        "app/presentation/router.go",
+        "app/usecase/auth/signup_usecase.go",
+        "app/infrastructure/aws/cognito.go",
+        "main.go"
+      ],
+      "exampleFilesGeneratedAt": 1751858125247,
+      "lastCost": 8.773186800000001,
+      "lastAPIDuration": 505099,
+      "lastDuration": 3231115,
+      "lastLinesAdded": 199,
+      "lastLinesRemoved": 18,
+      "lastTotalInputTokens": 23954,
+      "lastTotalOutputTokens": 22461,
+      "lastTotalCacheCreationInputTokens": 213032,
+      "lastTotalCacheReadInputTokens": 2082792,
+      "lastTotalWebSearchRequests": 0,
+      "lastSessionId": "39f2b11c-0ccd-4dd6-8d47-a16a12534482"
+    },
+    "/Users/tetsuhiromanome/sandbox/go/pokerroom/account-api/oauth2complience": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "token エンドポイントと authorize エンドポイントは golang.org/x/oauth2 を使ってテストしてほしいです！このライブラリが使えるなら、準拠していると言えると思うので！",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "すみません、今気づいたんですけど、Go 言語でも書いていただけますか？",
+          "pastedContents": {}
+        },
+        {
+          "display": "続きどうぞ",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +12 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "チェックしたい環境の情報は以下のとおりです。\n- token endpoint: https://stg.accounts.pokerroomapis.com/v1/oauth/token\n- authorize endpoint: https://stg.accounts.pokerroomapis.com/v1/oauth/authorize\n- jwks.json: https://stg.accounts.pokerroomapis.com/v1/oauth/.well-known/jwks.json\n- openid configuration: https://stg.accounts.pokerroomapis.com/v1/oauth/.well-known/openid-configuration\n- client_id: CJkQdiU8n7yzxwVxRW443ddf\n- client_secret: b9DB4fDLoRvgWv17TlnszUcAfdQ0Q1aQdfmBQqMdgWJqLP6pwjMVWnnbqMuAwlR3\n- 最初のトークン発行について:\n  - ログイン時にトークンが取得できるので、ログインを実行する\n  - ログイン情報 (response_body は例)\n    - endpoint: POST https://stg.accounts.pokerroomapis.com/v1/auth/signin\n    - request_body: {\"email\":\"dev+12@pokerroom.co.jp\",\"password\":\"Password1!\",\"client_id\":\"CJkQdiU8n7yzxwVxRW443ddf\"}\n    - response_body: {\"access_token\":\"string\",\"email\":\"string\",\"expires_in\":0,\"id_token\":\"string\",\"refresh_token\":\"string\",\"token_type\":\"string\"}"
+            }
+          }
+        },
+        {
+          "display": "続きをお願いします",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "golang.org/x/oauth2 よく使われていますね",
+          "pastedContents": {}
+        },
+        {
+          "display": "y",
+          "pastedContents": {}
+        },
+        {
+          "display": "これから、とある API が OAuth2.0 準拠であるかどうかのチェックのため, ライブラリを使ってチェックするコードを書きたいです。",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 4.36987675,
+      "lastAPIDuration": 665585,
+      "lastDuration": 3803318,
+      "lastLinesAdded": 1367,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 10129,
+      "lastTotalOutputTokens": 22859,
+      "lastTotalCacheCreationInputTokens": 164765,
+      "lastTotalCacheReadInputTokens": 764488,
+      "lastSessionId": "836f4206-2d9d-40d7-9f75-7feb51daf313"
+    }
+  },
+  "lastReleaseNotesSeen": "1.0.51",
+  "cachedChangelog": "# Changelog\n\n## 1.0.51\n\n- Added support for native Windows (requires Git for Windows)\n- Added support for Bedrock API keys through environment variable AWS_BEARER_TOKEN_BEDROCK\n- Settings: /doctor can now help you identify and fix invalid setting files\n- `--append-system-prompt` can now be used in interactive mode, not just --print/-p.\n- Increased auto-compact warning threshold from 60% to 80%\n- Fixed an issue with handling user directories with spaces for shell snapshots\n- OTEL resource now includes os.type, os.version, host.arch, and wsl.version (if running on Windows Subsystem for Linux)\n- Custom slash commands: Fixed user-level commands in subdirectories\n- Plan mode: Fixed issue where rejected plan from sub-task would get discarded\n\n## 1.0.48\n\n- Fixed a bug in v1.0.45 where the app would sometimes freeze on launch\n- Added progress messages to Bash tool based on the last 5 lines of command output\n- Added expanding variables support for MCP server configuration\n- Moved shell snapshots from /tmp to ~/.claude for more reliable Bash tool calls\n- Improved IDE extension path handling when Claude Code runs in WSL\n- Hooks: Added a PreCompact hook\n- Vim mode: Added c, f/F, t/T\n\n## 1.0.45\n\n- Redesigned Search (Grep) tool with new tool input parameters and features\n- Disabled IDE diffs for notebook files, fixing \"Timeout waiting after 1000ms\" error\n- Fixed config file corruption issue by enforcing atomic writes\n- Updated prompt input undo to Ctrl+\\_ to avoid breaking existing Ctrl+U behavior, matching zsh's undo shortcut\n- Stop Hooks: Fixed transcript path after /clear and fixed triggering when loop ends with tool call\n- Custom slash commands: Restored namespacing in command names based on subdirectories. For example, .claude/commands/frontend/component.md is now /frontend:component, not /component.\n\n## 1.0.44\n\n- New /export command lets you quickly export a conversation for sharing\n- MCP: resource_link tool results are now supported\n- MCP: tool annotations and tool titles now display in /mcp view\n- Changed Ctrl+Z to suspend Claude Code. Resume by running `fg`. Prompt input undo is now Ctrl+U.\n\n## 1.0.43\n\n- Fixed a bug where the theme selector was saving excessively\n- Hooks: Added EPIPE system error handling\n\n## 1.0.42\n\n- Added tilde (`~`) expansion support to `/add-dir` command\n\n## 1.0.41\n\n- Hooks: Split Stop hook triggering into Stop and SubagentStop\n- Hooks: Enabled optional timeout configuration for each command\n- Hooks: Added \"hook_event_name\" to hook input\n- Fixed a bug where MCP tools would display twice in tool list\n- New tool parameters JSON for Bash tool in `tool_decision` event\n\n## 1.0.40\n\n- Fixed a bug causing API connection errors with UNABLE_TO_GET_ISSUER_CERT_LOCALLY if `NODE_EXTRA_CA_CERTS` was set\n\n## 1.0.39\n\n- New Active Time metric in OpenTelemetry logging\n\n## 1.0.38\n\n- Released hooks. Special thanks to community input in https://github.com/anthropics/claude-code/issues/712. Docs: https://docs.anthropic.com/en/docs/claude-code/hooks\n\n## 1.0.37\n\n- Remove ability to set `Proxy-Authorization` header via ANTHROPIC_AUTH_TOKEN or apiKeyHelper\n\n## 1.0.36\n\n- Web search now takes today's date into context\n- Fixed a bug where stdio MCP servers were not terminating properly on exit\n\n## 1.0.35\n\n- Added support for MCP OAuth Authorization Server discovery\n\n## 1.0.34\n\n- Fixed a memory leak causing a MaxListenersExceededWarning message to appear\n\n## 1.0.33\n\n- Improved logging functionality with session ID support\n- Added prompt input undo functionality (Ctrl+Z and vim 'u' command)\n- Improvements to plan mode\n\n## 1.0.32\n\n- Updated loopback config for litellm\n- Added forceLoginMethod setting to bypass login selection screen\n\n## 1.0.31\n\n- Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON\n\n## 1.0.30\n\n- Custom slash commands: Run bash output, @-mention files, enable thinking with thinking keywords\n- Improved file path autocomplete with filename matching\n- Added timestamps in Ctrl-r mode and fixed Ctrl-c handling\n- Enhanced jq regex support for complex filters with pipes and select\n\n## 1.0.29\n\n- Improved CJK character support in cursor navigation and rendering\n\n## 1.0.28\n\n- Slash commands: Fix selector display during history navigation\n- Resizes images before upload to prevent API size limit errors\n- Added XDG_CONFIG_HOME support to configuration directory\n- Performance optimizations for memory usage\n- New attributes (terminal.type, language) in OpenTelemetry logging\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n- /resume slash command to switch conversations within Claude Code\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
+  "changelogLastFetched": 1752556970624,
+  "hasAcknowledgedCostThreshold": true,
+  "maxSubscriptionNoticeCount": 0,
+  "hasAvailableMaxSubscription": false,
+  "statsigModel": {
+    "firstParty": "claude-sonnet-4-20250514",
+    "bedrock": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "vertex": "claude-sonnet-4@20250514"
+  },
+  "isQualifiedForDataSharing": false,
+  "firstStartTime": "2025-05-14T04:01:27.035Z",
+  "claudeMaxTier": "not_max",
+  "subscriptionNoticeCount": 1,
+  "hasAvailableSubscription": false,
+  "oauthAccount": {
+    "accountUuid": "903ecc3b-d56c-4616-ace1-62241a973a46",
+    "emailAddress": "mush.mnm.tthr@hotmail.co.jp",
+    "organizationUuid": "df2e7bd5-de41-4621-83dc-27d456493486",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "Tetsuhiro Manome"
+  },
+  "fallbackAvailableWarningThreshold": 0.2,
+  "recommendedSubscription": "",
+  "mcpServers": {},
+  "hasUsedBackslashReturn": true
+}

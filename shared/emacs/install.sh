@@ -12,8 +12,7 @@ fi
 cd ./emacs
 git pull
 ./autogen.sh
-./configure --with-native-compilation \
-            --without-x \
+./configure --without-x \
             --with-ns \
             --with-imagemagick \
             --with-json

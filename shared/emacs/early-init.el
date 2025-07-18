@@ -12,9 +12,20 @@
 (push '(vertical-scroll-bars) default-frame-alist)
 (setq frame-inhibit-implied-resize t)
 (eval-when-compile (require 'cl-lib nil t))
+(setenv "LIBRARY_PATH" "/opt/homebrew/opt/libgccjit/lib/gcc/13")
+
 
 ;; disable package
 (setq package-enable-at-startup nil)
+
+(setq use-file-dialog nil)
+(setq inhibit-x-resources t)
+(setq inhibit-startup-buffer-menu t)
+
+(setq default-frame-alist
+      '(
+        (fullscreen . maximized)
+        (font . "Cica 16")))
 
 ;; ignore x session resources for slight speed-up
 (advice-add 'x-apply-session-resources :override 'ignore)
@@ -33,29 +44,5 @@
 
 (custom-set-variables '(custom-file (expand-file-name "custom.el" user-emacs-directory)))
 (provide 'early-init)
-
-;; <leaf-install-code>
-(eval-and-compile
-  (customize-set-variable
-   'package-archives '(("gnu"   . "https://elpa.gnu.org/packages/")
-                       ("melpa" . "https://melpa.org/packages/")
-                       ("org"   . "https://orgmode.org/elpa/")))
-  (package-initialize)
-  (unless (package-installed-p 'leaf)
-    (package-refresh-contents)
-    (package-install 'leaf))
-
-  (leaf leaf-keywords
-    :ensure t
-    :init
-    (leaf hydra :ensure t)
-    (leaf el-get :ensure t)
-    (leaf blackout :ensure t)
-
-    :config
-    (leaf-keywords-init))
-  )
-;; </leaf-install-code>
-
 
 ;;; early-init.el ends here

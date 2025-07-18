@@ -380,7 +380,7 @@ cursor:
   unfocused_hollow: true
 
 # Live config reload (changes require restart)
-live_config_reload: true
+general.live_config_reload: true
 
 # Shell
 #
@@ -407,7 +407,6 @@ live_config_reload: true
 enable_experimental_conpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: true
 
 # Key bindings
 #
@@ -617,3 +616,5 @@ key_bindings:
   - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                      }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
+  - { key: Backslash, mods: Alt,    chars: "\x1b\\"                          }
+  - { key: Yen,                     chars: "\\"                              }
