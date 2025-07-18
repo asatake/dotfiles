@@ -78,6 +78,24 @@ if [ -e "$HOME/.config/zellij/config.kdl" ]; then
   curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/shared/zellij/config.kdl > ~/.config/zellij/config.kdl
 fi
 
+# dot config
+if [ -e "$HOME/.zshrc" ]; then
+  echo ".zshrc already exists."
+else
+  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
+fi
+if [ -e "$HOME/.zshenv" ]; then
+  echo ".zshenv already exists."
+else
+  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
+fi
+if [ -e "$HOME/.profile" ]; then
+  echo ".profile already exists."
+else
+  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
+fi
+
+
 ## asdf
 if [[ -z $(asdf list direnv) ]]; then
   asdf plugin add direnv https://github.com/asdf-community/asdf-direnv
@@ -133,23 +151,6 @@ if [[ -z $(asdf list java)]]; then
   asdf plugin add java
   asdf install java openjdk-21
   asdf global java openjdk-21
-fi
-
-# dot config
-if [ -e "$HOME/.zshrc" ]; then
-  echo ".zshrc already exists."
-else
-  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshrc > ~/.zshrc
-fi
-if [ -e "$HOME/.zshenv" ]; then
-  echo ".zshenv already exists."
-else
-  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.zshenv > ~/.zshenv
-fi
-if [ -e "$HOME/.profile" ]; then
-  echo ".profile already exists."
-else
-  curl -fsSL https://raw.githubusercontent.com/asatake/dotfiles/main/macos/.profile > ~/.profile
 fi
 
 # emacs
